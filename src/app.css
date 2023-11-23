@@ -1,0 +1,225 @@
+h1 {
+    color: rgb(0, 112, 210);
+}
+p {
+    font-family: 'Salesforce Sans', Arial, sans-serif;
+    color: rgb(62, 62, 60);
+}
+.app {
+    background-color: #fafaf9;
+    height: 100vh;
+    overflow: scroll;
+}
+
+.pad-10-bottom {
+    padding-bottom: 10px;
+}
+
+.pad-10-top {
+    padding-top: 10px;
+}
+
+.pad-20-left {
+    padding-left: 20px;
+}
+
+.table-responsive {
+    overflow-x: unset;
+}
+.table-responsive {
+    margin-bottom: 0px;
+}
+.table-responsive {
+    display: block;
+    width: 100%;
+}
+
+.margin-20-top {
+    margin-top: 20px;
+}
+.margin-20-left {
+    margin-left: 20px;
+}
+
+.spacer30 {
+    height: 30px;
+}
+
+.borderGrayLight6btm {
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.borderGrayLight6 {
+    border: 1px solid #d4d4d4;
+}
+
+.package-phone-desc-items-heading {
+    color: #000;
+    font-size: 18px;
+}
+.text-bold, .txtBold {
+    font-weight: bold;
+}
+
+.scrollAdjust {
+    overflow: auto;
+}
+
+.scrollAdjust::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.scrollAdjust::-webkit-scrollbar-thumb {
+    height: 40px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    background: #0b5aa0;
+    -webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 50%);
+}
+
+.scrollAdjust::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    background: #e1e1e1;
+}
+
+pre {
+    height: 300px;
+    overflow-y: scroll;
+    border: 0px solid #ccc;
+    border-radius: none;
+}
+pre {
+    display: block;
+    font-size: 87.5%;
+    color: #212529;
+}
+pre {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    overflow: auto;
+}
+
+.pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 50rem;
+}
+
+.pad-30 {
+    padding: 30px;
+}
+
+.bgWhite {
+    background-color: #fff;
+}
+
+h1.bellSlimHeavy, h1.bellSlimBlack {
+    letter-spacing: -1px;
+}
+.bellSlimBlack {
+    font-family: 'bellslim_font_black', Helvetica, Arial, sans-serif;
+}
+
+.margin-10-bottom {
+    margin-bottom: 10px;
+}
+.noMargin {
+    margin: 0;
+}
+.txtSize32 {
+    font-size: 32px;
+}
+
+.line-height-38-sm-up {
+    line-height: 38px;
+}
+
+.spacer10 {
+    height: 10px;
+}
+
+.package-phone-desc-items-heading {
+    color: #000;
+    font-size: 18px;
+}
+.text-bold, .txtBold {
+    font-weight: bold;
+}
+
+.spacer20 {
+    height: 20px;
+}
+
+.spacer15 {
+    height: 15px;
+}
+
+.table-responsive {
+    overflow-x: unset;
+}
+.table-responsive {
+    margin-bottom: 0px;
+}
+.table-responsive {
+    display: block;
+    width: 100%;
+}
+
+.table {
+    display: table !important;
+    margin-bottom: 0;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.table-responsive>.table-bordered {
+    border: 0;
+}
+
+.txtWhite,
+thead p {
+    color: #fff!important;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.table > thead:first-child > tr:first-child > th {
+    border: 1px solid #054071;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.bgBlueDark {
+    background-color: #003778;
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+
+.table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
+    border: 1px solid #ddd;
+}

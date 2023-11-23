@@ -1,0 +1,1997 @@
+<template>
+	<div class="slds-grid slds-wrap slds-p-around_small" style="background: white;">
+		<div class="slds-col slds-size_1-of-1 slds-p-bottom_large">
+			<div class="slds-grid slds-gutters">
+				<div class="slds-col slds-size_2-of-3">
+					<div class="slds-grid slds-gutters">
+						<div class="slds-col slds-size_1-of-5">
+							<img src="https://mmassel-211215-785-demo--c.documentforce.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=0685f000003UYRh&operationContext=DELIVERY&contentId=05T5f00000LlTrh&page=0&d=/a/5f000000oNww/zujB8G1iimqrs6Dc1IN5HOoTWdSGN._3ZU9uOes6Vm0&oid=00D5f000007JBl3&dpt=null&viewId=">
+						</div>
+						<div class="slds-col slds-size_4-of-5">
+							<div class="slds-grid slds-grid_vertical">
+								<div class="slds-col">
+									<div class="slds-text-heading_large">Change Management</div>
+								</div>
+								<div class="slds-col">
+									<div class="slds-text-body_small slds-p-top_xx-small" style="font-weight: 400 !important;">Released on
+										Dec-03-2021</div>
+								</div>
+								<div class="slds-col">
+									<a href="" class="floatL">
+										<img src="https://developer-api.bell.ca/content/img/img23.png" class="inlineBlock" style="position: relative; top: -2px; left: -8px;" />
+										<div class="txtBlue txtBold txtSize14 inlineBlock"
+											style="margin-left: -5px; margin-bottom: 0px; font-weight: bold; display: inline-block; color: #00549a;">
+											Get swagger file
+										</div>
+									</a>
+									<a href="" class="slds-p-left_medium">
+										<img src="https://developer-api.bell.ca/Content/img/Pdfnew.png" class="inlineBlock" style="position: relative; top: -2px; left: -8px;" />
+										<div class="txtBlue txtBold txtSize14 inlineBlock"
+											style="margin-left: -5px; margin-bottom: 0px; font-weight: bold; display: inline-block; color: #00549a;">
+											Get specification file
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slds-col slds-size_1-of-3">
+					<div class="slds-grid slds-grid_vertical">
+						<div class="slds-col">
+							<div class="slds-text-title_bold">
+								TMF Version:
+								<span class="slds-text-body_regular" style="font-weight: 400 !important;">TMF655 v18.0.0</span>
+							</div>
+						</div>
+						<div class="slds-col">
+							<div class="slds-text-title_bold">
+								Bell Version:
+								<span class="slds-text-body_regular" style="font-weight: 400 !important;">v1.1</span>
+							</div>
+						</div>
+						<div class="slds-col">
+							<div class="slds-text-title_bold">
+								Last Updated:
+								<span class="slds-text-body_regular" style="font-weight: 400 !important;">Dec-03-2021</span>
+							</div>
+						</div>
+						<div class="slds-col">
+							<div class="slds-text-title_bold">
+								Protocols:
+								<span class="slds-text-body_regular" style="font-weight: 400 !important;">REST</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr style="margin: 1rem 0 0 0 !important;" />
+		</div>
+		<div class="slds-col slds-size_1-of-1">
+			<lightning-tabset variant="vertical">
+				<lightning-tab label="Overview">
+					<div id="content-1" class="bgWhite pad-30 no-pad-xs no-pad-sm" style="display: block;">
+						<div style="display: inline;" class="block Custom-Side-Tab">
+							<h1
+								class="txtSize32 txtSize20-xs bellSlimBlack noMargin txtBlack2 line-height-38-sm-up line-height-22-xs letter-spacing-neg-000500 margin-10-bottom">
+								Business Overview
+							</h1>
+
+							<div class="spacer10"></div>
+							<div id="businessOverViewContent">
+								<span>
+                                    <p style="text-align: justify;">
+                                        The following document is the specification of the REST API for the change request resource. It includes the model definition as well as all available operations. Possible actions are creating and
+                                        retrieving a change request, updating a rejected change request and, partially updating an approved change request. Furthermore, the GET allows filtering using standard filter criteria.
+                                    </p>
+                                    <p style="text-align: justify;">
+                                        The Change Management API provides a standardized client interface to the Change Management Systems for creating, tracking and managing change requests as a result of a change requested by a customer.
+                                    </p>
+                                    <p style="text-align: justify;">
+                                        The API supports the ability to send requests to create a new change specifying the nature and severity of the change as well as all necessary related information. The API also includes mechanisms to
+                                        search for and update existing change requests. Notifications are defined to provide information when a change request has been updated, including status changes.
+                                    </p>
+                                </span>
+
+								<div class="package-phone-desc-items-heading txtBold">The Change Management API manages change request
+									resources:</div>
+								<ul style="background-color: white;">
+									<li>
+										A change request represents a request for a change in service being raised by a requester
+									</li>
+									<li>
+										The main change request attributes are its description, priority, type, related dates (planned start
+										date, planned end date), state and related information (change reason), related parties(originator,
+										owner, reviser, etc.), related entities (configuration item, etc.) and notes
+									</li>
+								</ul>
+
+								<div class="package-phone-desc-items-heading txtBold">Change Management API performs the following
+									operations:</div>
+								<ul style="background-color: white;">
+									<li>Retrieval of a change request or a collection of change requests depending on filter criteria</li>
+									<li>Partial update on a change request</li>
+									<li>Full update on a rejected change request</li>
+									<li>Creation of a change request</li>
+									<li>
+										Notification of events on a change request:
+										<ul style="background-color: white;">
+											<li>Change request state change</li>
+											<li>Change request implemented</li>
+											<li>Change request created</li>
+											<li>Change request Information required</li>
+										</ul>
+									</li>
+								</ul>
+								<div class="spacer20"></div>
+
+								<div class="package-phone-desc-items-heading txtBold">The Change Request API supports the following
+									functions:</div>
+								<div class="spacer15"></div>
+								<div class="table-responsive" style="padding-left: 5px;">
+									<table class="table table-bordered">
+										<thead class="txtWhite">
+											<tr>
+												<th class="valign-middle bgBlueDark" style="width: 60px;">
+													<p>Sr No.</p>
+												</th>
+												<th class="valign-middle bgBlueDark">
+													<p>Operation</p>
+												</th>
+												<th class="valign-middle bgBlueDark">
+													<p>Flow</p>
+												</th>
+												<th class="valign-middle bgBlueDark">
+													<p>Origin</p>
+												</th>
+												<th class="valign-middle bgBlueDark">
+													<p>Description</p>
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<p>1</p>
+												</td>
+												<td>
+													<p>CreateChangeManagement</p>
+												</td>
+												<td>
+													<p>Partner &gt; Bell</p>
+												</td>
+												<td>
+													<p>Customer Initiated</p>
+												</td>
+												<td>
+													<p>Partner initiates a creation of Change Request. The API offer guaranteed message delivery.
+													</p>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<p>2</p>
+												</td>
+												<td>
+													<p>PatchChangeManagement</p>
+												</td>
+												<td>
+													<p>Partner &gt; Bell</p>
+												</td>
+												<td>
+													<p>Customer Initiated</p>
+												</td>
+												<td>
+													<p>
+														Customer requests to update an existing Change into Bell (by Bell Change ID). The API offers
+														guaranteed message delivery. In a Patch request, the customer should only be sending fields
+														that need to be changed/updated and not the entire payload.
+													</p>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<p>3</p>
+												</td>
+												<td>
+													<p>RetrieveChangManagement</p>
+												</td>
+												<td>
+													<p>Partner &gt; Bell</p>
+												</td>
+												<td>
+													<p>Customer Initiated</p>
+												</td>
+												<td>
+													<p>Get Change Request details for the given Bell Change ID.</p>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<p>4</p>
+												</td>
+												<td>
+													<p>ListChangeManagement</p>
+												</td>
+												<td>
+													<p>Partner &gt; Bell</p>
+												</td>
+												<td>
+													<p>Customer Initiated</p>
+												</td>
+												<td>
+													<p>Get list of Change Requests. All Change Requestscreated internally by Bell or Externally by
+														Partners can be retrieved for the given customer.</p>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<p>5</p>
+												</td>
+												<td>
+													<p>CreateHub</p>
+												</td>
+												<td>
+													<p>Utility</p>
+												</td>
+												<td>
+													<p>Customer Initiated</p>
+												</td>
+												<td>
+													<p>
+														Create Hub to register a listener for all incoming communications/notifications from Bell to
+														Customer. Hub enables publish and subscribe pattern for the create and update
+														notifications.
+													</p>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<p>6</p>
+												</td>
+												<td>
+													<p>GetHub</p>
+												</td>
+												<td>
+													<p>Utility</p>
+												</td>
+												<td>
+													<p>Customer Initiated</p>
+												</td>
+												<td>
+													<p>Retrieve Hub already created on Bell. Customer can retrieve all the listeners registered on
+														hub for a specific Hub ID.</p>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<p>7</p>
+												</td>
+												<td>
+													<p>DeleteHub</p>
+												</td>
+												<td>
+													<p>Utility</p>
+												</td>
+												<td>
+													<p>Customer Initiated</p>
+												</td>
+												<td>
+													<p>Delete a Hub resource on Bell. Customer can delete registered Hub by Hub ID</p>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<p>8</p>
+												</td>
+												<td>
+													<p>GetMonitor</p>
+												</td>
+												<td>
+													<p>Utility</p>
+												</td>
+												<td>
+													<p>Customer Initiated</p>
+												</td>
+												<td>
+													<p>
+														Retrieve the change status at any given point in time. This is mainly used when the
+														operation is asynchronous. This function is optional; The client may chose to integrate it
+														or not.
+													</p>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<p>9</p>
+												</td>
+												<td>
+													<p>Publish Notification</p>
+												</td>
+												<td>
+													<p>Bell &gt; Partner</p>
+												</td>
+												<td>
+													<p>Bell Initiated</p>
+												</td>
+												<td>
+													<p>Bell sends update notifications, status change notifications, outbound communications or
+														BELL initiated Change Request notification via registered listener on Hub.</p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</lightning-tab>
+				<lightning-tab label="POST /hub">
+					<h1 id="titlecontent" class="txtSize32 txtSize26-xs txtBold txtBlack " style="display: block;">POST /hub</h1>
+					<lightning-tabset active-tab-value="one">
+						<lightning-tab label="Curl" value="one">
+							<label>
+                                                            <span style="text-underline-position:auto;">
+
+                                                                <div class="package-phone-desc-items-heading txtBold ">Example Request</div>
+                                                            </span>
+                                                        </label>
+							<code class="pre pad-5">
+                                <pre id="requestsesection" class="scrollAdjust" style="height: 165px;">
+								 curl --request POST \<br>
+								--url  ' ' \<br>
+								--header 'accept: application/json' \<br>
+								--header 'content-type: application/json' \<br>
+								--header 'SECURITY_CREDENTIALS' \<br>
+								--header 'x-external-system' \ (for use in sandbox mode only, pass any<br>
+								unique value >= 8 chars)<br>
+								--data "callback":"bamac","query":"fisaevlo"<br>
+									</pre>
+                            </code>
+						</lightning-tab>
+						<lightning-tab label="Python" value="two">
+							<label>
+                                                            <span style="text-underline-position:auto;">
+
+                                                                <div class="package-phone-desc-items-heading txtBold ">Example Request</div>
+                                                            </span>
+                                                        </label>
+							<code class="pre pad-5">
+                                                            <pre class="scrollAdjust" style="height:165px">
+																															import http.client<br>
+
+conn = http.client.HTTPSConnection("")<br>
+
+payload = "\"callback\":\"bamac\",\"query\":\"fisaevlo\"}"<br>
+
+headers = <br>
+    'SECURITY_CREDENTIALS',<br>
+    'content-type': "application/json",<br>
+    'accept': "application/json",<br>
+    'x-external-system' \ (for use in sandbox mode only, pass any unique <br>
+    value &gt;= 8 chars)<br>
+    }<br>
+
+conn.request("POST", "", payload, headers)<br>
+
+res = conn.getresponse()<br>
+data = res.read()<br>
+
+print(data.decode("utf-8"))</pre>
+                                                        </code>
+						</lightning-tab>
+						<lightning-tab label="PHP" value="three">
+							<label>
+                                                            <span style="text-underline-position:auto;">
+
+                                                                <div class="package-phone-desc-items-heading txtBold ">Example Request</div>
+                                                            </span>
+                                                        </label>
+							<code class="pre pad-5">
+                                                            <pre  class="scrollAdjust" style="height:165px">&lt;?php<br>
+
+$curl = curl_init();<br>
+
+curl_setopt_array($curl, array(<br>
+  CURLOPT_URL =&gt; " ",<br>
+  CURLOPT_RETURNTRANSFER =&gt; true,<br>
+  CURLOPT_ENCODING =&gt; "",<br>
+  CURLOPT_MAXREDIRS =&gt; 10,<br>
+  CURLOPT_TIMEOUT =&gt; 30,<br>
+  CURLOPT_HTTP_VERSION =&gt; CURL_HTTP_VERSION_1_1,<br>
+  CURLOPT_CUSTOMREQUEST =&gt; "POST",<br>
+  CURLOPT_POSTFIELDS =&gt; "\"callback\":\"bamac\",\"query\":\"fisaevlo\"}",<br>
+  CURLOPT_HTTPHEADER =&gt; array(<br>
+    "accept: application/json",<br>
+    "content-type: application/json",<br>
+    'SECURITY_CREDENTIALS',<br>
+    'x-external-system' \ (for use in sandbox mode only, pass any unique <br>
+     value  &gt;= 8 chars)<br>
+  ),<br>
+));<br>
+
+$response = curl_exec($curl);<br>
+$err = curl_error($curl);<br>
+
+curl_close($curl);<br>
+
+if ($err) {<br>
+  echo "cURL Error #:" . $err;<br>
+} else {<br>
+  echo $response;<br>
+}</pre>
+                                                        </code>
+						</lightning-tab>
+						<lightning-tab label="Java" value="four">
+							<label>
+                                                            <span style="text-underline-position:auto;">
+
+                                                                <div class="package-phone-desc-items-heading txtBold ">Example Request</div>
+                                                            </span>
+                                                        </label>
+							<code class="pre pad-5">
+                                                            <pre class="scrollAdjust" style="height:165px">// OkHttpClient from http://square.github.io/okhttp/<br>
+
+OkHttpClient client = new OkHttpClient();<br>
+
+MediaType mediaType = MediaType.parse("application/json");<br>
+RequestBody body = RequestBody.create(mediaType, "\"callback\":\"bamac\",\"query\":\"fisaevlo\"}");<br>
+Request request = new Request.Builder()<br>
+  .url(" ")<br>
+  .post(body)<br>
+  .addHeader('SECURITY_CREDENTIALS')<br>
+  .addHeader("content-type", "application/json")<br>
+  .addHeader("accept", "application/json")<br>
+  .addHeader('x-external-system' \ (for use in sandbox mode only, pass any <br>
+   unique value &gt;= 8 chars))<br>
+  .build();<br>
+
+Response response = client.newCall(request).execute();</pre>
+                                                        </code>
+						</lightning-tab>
+						<label>
+                            <span style="text-underline-position: auto;">
+                                <div class="spacer10"></div>
+
+                                <div class="package-phone-desc-items-heading txtBold">Example Response</div>
+                            </span>
+                        </label>
+						<div class="pre pad-5">
+							<pre id="responsesection" class="scrollAdjust">
+   "id":42,<br>
+   "query":"ExternalID=TEST_123",<br>
+   "callback":"http://client.listener/notification"<br>
+}
+</pre>
+						</div>
+						<div id="Lcontenet">
+							<span>
+                                <div class="package-phone-desc-items-heading txtBold margin-20-top">Path</div>
+                            </span>
+							<span>POST /ChangeManagement/v18/hub</span>
+
+							<div class="spacer30"></div>
+
+							<div class="borderGrayLight6">
+								<label>
+                                    <div class="package-phone-desc-items-heading txtBold margin-20-top margin-20-left">Parameters</div>
+                                </label>
+
+								<div class="table-responsive">
+									<table style="width: 100%;">
+										<tbody>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width: 200px;">
+													ExternalID
+												</td>
+												<td class="pad-10-bottom pad-10-top" style="padding-left: 40px;">
+													Customer CR ID
+												</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width: 200px;">Optional In Query</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width: 200px;">string</td>
+											</tr>
+											<tr class="borderGrayLight6btm">
+												<td class="pad-10-bottom pad-20-left" style="width: 200px;"></td>
+												<td class="pad-10-bottom pad-30-left"></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width: 200px;">
+													EventType
+												</td>
+												<td class="pad-10-bottom pad-10-top" style="padding-left: 40px;">
+													Type of event for which the customer wants to subscribe to notifications. If left blank,
+													customer will subscribe to all events.
+												</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width: 200px;">Optional In Query</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width: 200px;">String</td>
+											</tr>
+											<tr class="borderGrayLight6btm">
+												<td class="pad-10-bottom pad-20-left" style="width: 200px;"></td>
+												<td class="pad-10-bottom pad-30-left"></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width: 200px;">
+													CRID
+												</td>
+												<td class="pad-10-bottom pad-10-top" style="padding-left: 40px;">
+													Bell CR ID
+												</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width: 200px;">Optional In Query</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width: 200px;">Integer</td>
+											</tr>
+											<tr class="borderGrayLight6btm">
+												<td class="pad-10-bottom pad-20-left" style="width: 200px;"></td>
+												<td class="pad-10-bottom pad-30-left"></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width: 200px;">
+													data
+												</td>
+												<td class="pad-10-bottom pad-10-top" style="padding-left: 40px;">
+													Data containing the callback endpoint to deliver the information
+												</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width: 200px;">Required In Body</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width: 200px;">string</td>
+											</tr>
+											<tr class="borderGrayLight6btm">
+												<td class="pad-10-bottom pad-20-left" style="width: 200px;"></td>
+												<td class="pad-10-bottom pad-30-left"></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="spacer30"></div>
+							<div class="borderGrayLight6">
+								<label>
+                                    <div class="package-phone-desc-items-heading txtBold margin-20-top margin-20-left">Response</div>
+                                </label>
+
+								<div class="table-responsive">
+									<table style="width: 100%;">
+										<tbody>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width: 200px;">201</td>
+												<td class="pad-10-bottom pad-10-top" style="padding-left: 40px;">Subscribed</td>
+											</tr>
+											<tr class="borderGrayLight6btm">
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width: 200px;">400</td>
+												<td class="pad-10-bottom pad-10-top" style="padding-left: 40px;">Bad Request</td>
+											</tr>
+											<tr class="borderGrayLight6btm">
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width: 200px;">401</td>
+												<td class="pad-10-bottom pad-10-top" style="padding-left: 40px;">Unauthorized</td>
+											</tr>
+											<tr class="borderGrayLight6btm">
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width: 200px;">403</td>
+												<td class="pad-10-bottom pad-10-top" style="padding-left: 40px;">Forbidden</td>
+											</tr>
+											<tr class="borderGrayLight6btm">
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width: 200px;">404</td>
+												<td class="pad-10-bottom pad-10-top" style="padding-left: 40px;">Not Found</td>
+											</tr>
+											<tr class="borderGrayLight6btm">
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width: 200px;">405</td>
+												<td class="pad-10-bottom pad-10-top" style="padding-left: 40px;">Method Not allowed</td>
+											</tr>
+											<tr class="borderGrayLight6btm">
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width: 200px;">409</td>
+												<td class="pad-10-bottom pad-10-top" style="padding-left: 40px;">Conflict</td>
+											</tr>
+											<tr class="borderGrayLight6btm">
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width: 200px;">500</td>
+												<td class="pad-10-bottom pad-10-top" style="padding-left: 40px;">Internal Server Error</td>
+											</tr>
+											<tr class="borderGrayLight6btm">
+												<td></td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="spacer30"></div>
+						</div>
+					</lightning-tabset>
+				</lightning-tab>
+				<lightning-tab label="GET /hub/{id}">
+					<lightning-tabset active-tab-value="one">
+						<lightning-tab label="Curl" value="one">
+							<label>
+                                                            <span style="text-underline-position:auto;">
+
+                                                                <div class="package-phone-desc-items-heading txtBold ">Example Request</div>
+                                                            </span>
+                                                        </label>
+							<code class="pre pad-5">
+                                                            <pre  class="scrollAdjust" style="height:165px">curl --request GET \<br>
+  --url '' \<br>
+  --header 'accept: application/json' \<br>
+  --header 'SECURITY_CREDENTIALS' \<br>
+  --header 'x-external-system' \ (for use in sandbox mode only, pass any <br>
+  unique value &gt;= 8 chars)</pre>
+                                                        </code>
+						</lightning-tab>
+						<lightning-tab label="Python" value="two">
+							<label>
+                                                            <span style="text-underline-position:auto;">
+
+                                                                <div class="package-phone-desc-items-heading txtBold ">Example Request</div>
+                                                            </span>
+                                                        </label>
+							<code class="pre pad-5">
+                                                            <pre class="scrollAdjust" style="height:165px">import http.client<br>
+
+conn = http.client.HTTPSConnection("")<br>
+
+headers = <br>
+    'SECURITY_CREDENTIALS',<br>
+    'accept': "application/json",<br>
+    'x-external-system' \ (for use in sandbox mode only, pass any unique <br>
+     value &gt;= 8 chars)<br>
+    }<br>
+<br>
+conn.request("GET", "", headers=headers)<br>
+<br>
+res = conn.getresponse()<br>
+data = res.read()<br>
+<br>
+print(data.decode("utf-8"))</pre>
+                                                        </code>
+						</lightning-tab>
+						<lightning-tab label="PHP" value="three">
+							<label>
+                                                            <span style="text-underline-position:auto;">
+
+                                                                <div class="package-phone-desc-items-heading txtBold ">Example Request</div>
+                                                            </span>
+                                                        </label>
+							<code class="pre pad-5">
+                                                            <pre class="scrollAdjust" style="height:165px">&lt;?php<br>
+
+$curl = curl_init();<br>
+<br>
+curl_setopt_array($curl, array(<br>
+  CURLOPT_URL =&gt; "",<br>
+  CURLOPT_RETURNTRANSFER =&gt; true,<br>
+  CURLOPT_ENCODING =&gt; "",<br>
+  CURLOPT_MAXREDIRS =&gt; 10,<br>
+  CURLOPT_TIMEOUT =&gt; 30,<br>
+  CURLOPT_HTTP_VERSION =&gt; CURL_HTTP_VERSION_1_1,<br>
+  CURLOPT_CUSTOMREQUEST =&gt; "GET",<br>
+  CURLOPT_HTTPHEADER =&gt; array(<br>
+    "accept: application/json",<br>
+    'SECURITY_CREDENTIALS',<br>
+    'x-external-system' \ (for use in sandbox mode only, pass any unique <br>
+    value &gt;= 8 chars)<br>
+  ),<br>
+));<br>
+<br>
+$response = curl_exec($curl);<br>
+$err = curl_error($curl);<br>
+<br>
+curl_close($curl);<br>
+<br>
+if ($err) {<br>
+  echo "cURL Error #:" . $err;<br>
+} else {<br>
+  echo $response;<br>
+}</pre>
+                                                        </code>
+						</lightning-tab>
+						<lightning-tab label="Java" value="four">
+							<label>
+                                                            <span style="text-underline-position:auto;">
+
+                                                                <div class="package-phone-desc-items-heading txtBold ">Example Request</div>
+                                                            </span>
+                                                        </label>
+							<code class="pre pad-5">
+                                                            <pre class="scrollAdjust" style="height:165px">// OkHttpClient from http://square.github.io/okhttp/<br>
+<br>
+OkHttpClient client = new OkHttpClient();<br>
+<br>
+Request request = new Request.Builder()<br>
+  .url("")<br>
+  .get()<br>
+  .addHeader('SECURITY_CREDENTIALS')<br>
+  .addHeader("accept", "application/json")<br>
+  .addHeader('x-external-system' \ (for use in sandbox mode only, pass any <br>
+   unique value &gt;= 8 chars))<br>
+  .build();<br>
+<br>
+Response response = client.newCall(request).execute();</pre>
+                                                        </code>
+						</lightning-tab>
+						<label>
+                                                            <span style="text-underline-position:auto;">
+                                                                <div class="spacer10"></div>
+
+                                                                <div class="package-phone-desc-items-heading txtBold ">Example Response</div>
+                                                            </span>
+                                                        </label>
+						<div class="pre pad-5">
+							<pre class="scrollAdjust">[<br>
+   
+      "id":42,<br>
+      "query":"REQ12345",<br>
+      "callback":"https://localhost:9043/acmeinc/notification"<br>
+   },<br>
+   <br>
+      "id":42,<br>
+      "query":"REQ12345",<br>
+      "callback":"https://localhost:9043/acmeinc/notification1"<br>
+   }<br>
+]</pre>
+						</div>
+						<div>
+
+							<span>
+
+        <div class="package-phone-desc-items-heading txtBold margin-20-top">Path</div>
+    </span> <span>get /hub/{id}</span>
+
+							<div class="spacer30"></div>
+
+							<div class="borderGrayLight6">
+								<label>
+            <div class="package-phone-desc-items-heading txtBold margin-20-top margin-20-left">Parameters</div>
+        </label>
+
+								<div class="table-responsive">
+									<table style="width:100%">
+
+										<tbody>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">
+													ID
+												</td>
+												<td class="pad-10-bottom pad-10-top" style="padding-left: 40px">
+													Hub ID
+												</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width:200px">Required In Query</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width:200px">string</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td class="pad-10-bottom pad-20-left" style="width:200px"></td>
+												<td class="pad-10-bottom pad-30-left"></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+							</div>
+							<div class="spacer30"></div>
+							<div class="borderGrayLight6">
+
+								<label>
+            <div class="package-phone-desc-items-heading txtBold margin-20-top margin-20-left">Response</div>
+        </label>
+
+								<div class="table-responsive">
+									<table style="width:100%">
+
+										<tbody>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">200 </td>
+												<td class="pad-10-bottom pad-10-top " style="padding-left: 40px">Success</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">404 </td>
+												<td class="pad-10-bottom pad-10-top " style="padding-left: 40px">Bad Request</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">401 </td>
+												<td class="pad-10-bottom pad-10-top " style="padding-left: 40px">Unauthorized</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">403 </td>
+												<td class="pad-10-bottom pad-10-top " style="padding-left: 40px">Forbidden</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">500 </td>
+												<td class="pad-10-bottom pad-10-top " style="padding-left: 40px">Internal Server Error</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td></td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+
+								</div>
+
+
+
+							</div>
+							<div class="spacer30"></div>
+						</div>
+					</lightning-tabset>
+				</lightning-tab>
+				<lightning-tab label="GET /changeRequest/{id}">
+					<lightning-tabset active-tab-value="one">
+						<lightning-tab label="Curl" value="one">
+							<label>
+                                                            <span style="text-underline-position:auto;">
+
+                                                                <div class="package-phone-desc-items-heading txtBold ">Example Request</div>
+                                                            </span>
+                                                        </label>
+							<code class="pre pad-5">
+                                                            <pre  class="scrollAdjust" style="height:165px">curl --request GET \<br>
+  --url '' \<br>
+  --header 'accept: application/json' \<br>
+  --header 'SECURITY_CREDENTIALS' \<br>
+  --header 'x-external-system' \ (for use in sandbox mode only, pass any <br>
+  unique value &gt;= 8 chars)</pre>
+                                                        </code>
+						</lightning-tab>
+						<lightning-tab label="Python" value="two">
+							<label>
+                                                            <span style="text-underline-position:auto;">
+
+                                                                <div class="package-phone-desc-items-heading txtBold ">Example Request</div>
+                                                            </span>
+                                                        </label>
+							<code class="pre pad-5">
+                                                            <pre class="scrollAdjust" style="height:165px">import http.client<br>
+
+conn = http.client.HTTPSConnection("")<br>
+<br>
+headers = <br>
+    'SECURITY_CREDENTIALS',<br>
+    'accept': "application/json",<br>
+    'x-external-system' \ (for use in sandbox mode only, pass any unique <br>
+     value &gt;= 8 chars)<br>
+    }<br>
+<br>
+conn.request("GET", "", headers=headers)<br>
+<br>
+res = conn.getresponse()<br>
+data = res.read()<br>
+<br>
+print(data.decode("utf-8"))</pre>
+                                                        </code>
+						</lightning-tab>
+						<lightning-tab label="PHP" value="three">
+							<label>
+                                                            <span style="text-underline-position:auto;">
+
+                                                                <div class="package-phone-desc-items-heading txtBold ">Example Request</div>
+                                                            </span>
+                                                        </label>
+							<code class="pre pad-5">
+                                                            <pre class="scrollAdjust" style="height:165px">&lt;?php<br>
+
+$curl = curl_init();<br>
+<br>
+curl_setopt_array($curl, array(<br>
+  CURLOPT_URL =&gt; "",<br>
+  CURLOPT_RETURNTRANSFER =&gt; true,<br>
+  CURLOPT_ENCODING =&gt; "",<br>
+  CURLOPT_MAXREDIRS =&gt; 10,<br>
+  CURLOPT_TIMEOUT =&gt; 30,<br>
+  CURLOPT_HTTP_VERSION =&gt; CURL_HTTP_VERSION_1_1,<br>
+  CURLOPT_CUSTOMREQUEST =&gt; "GET",<br>
+  CURLOPT_HTTPHEADER =&gt; array(<br>
+    "accept: application/json",<br>
+    'SECURITY_CREDENTIALS',<br>
+    'x-external-system' \ (for use in sandbox mode only, pass any unique <br>
+    value &gt;= 8 chars)<br>
+  ),<br>
+));<br>
+<br>
+$response = curl_exec($curl);<br>
+$err = curl_error($curl);<br>
+<br>
+curl_close($curl);<br>
+<br>
+if ($err) {<br>
+  echo "cURL Error #:" . $err;<br>
+} else {<br>
+  echo $response;<br>
+}</pre>
+                                                        </code>
+						</lightning-tab>
+						<lightning-tab label="Java" value="four">
+							<label>
+                                                            <span style="text-underline-position:auto;">
+
+                                                                <div class="package-phone-desc-items-heading txtBold ">Example Request</div>
+                                                            </span>
+                                                        </label>
+							<code class="pre pad-5">
+                                                            <pre class="scrollAdjust" style="height:165px">// OkHttpClient from http://square.github.io/okhttp/<br>
+<br>
+OkHttpClient client = new OkHttpClient();<br>
+<br>
+Request request = new Request.Builder()<br>
+  .url("")<br>
+  .get()<br>
+  .addHeader('SECURITY_CREDENTIALS')<br>
+  .addHeader("accept", "application/json")<br>
+  .addHeader('x-external-system' \ (for use in sandbox mode only, pass any <br>
+   unique value &gt;= 8 chars))<br>
+  .build();<br>
+<br>
+Response response = client.newCall(request).execute();</pre>
+                                                        </code>
+						</lightning-tab>
+						<label>
+                                                            <span style="text-underline-position:auto;">
+                                                                <div class="spacer10"></div>
+
+                                                                <div class="package-phone-desc-items-heading txtBold ">Example Response</div>
+                                                            </span>
+                                                        </label>
+						<div class="pre pad-5">
+							<pre class="scrollAdjust">
+   "description":"Billing, Contract, General Inquiries",<br>
+   "externalId":"TESTCR-0909-01",<br>
+   "id":"SR421426",<br>
+   "priority":"STANDARD",<br>
+   "status":"WBELLACK",<br>
+   "targetEntity":[<br>
+         "id":"GTDE-NSMIS-GLOBAL"<br>
+      }<br>
+   ],<br>
+   "relatedParty":[<br>
+         "role":"sitecontact",<br>
+         "individual":<br>
+            "givenName":"Test",<br>
+            "familyName":"User",<br>
+            "contactMedium":[<br>
+                  "type":"telephone",<br>
+                  "medium":<br>
+                     "number":"12345678"<br>
+                  }<br>
+               },<br>
+                  "type":"Cellphone",<br>
+                  "medium":<br>
+                     "number":"1234567890"<br>
+                  }<br>
+               },<br>
+                  "type":"Page",<br>
+                  "medium":<br>
+                     "number":"12"<br>
+                  }<br>
+               },<br>
+                  "type":"Email",<br>
+                  "medium":<br>
+                     "emailAddress":"abc@gmail.com"<br>
+                  }<br>
+               }<br>
+            ]<br>
+         }<br>
+      },<br>
+         "role":"sitecontact2",<br>
+         "individual":<br>
+            "givenName":"Test",<br>
+            "familyName":"User",<br>
+            "contactMedium":[<br>
+                  "type":"telephone",<br>
+                  "medium":<br>
+                     "number":"98765432"<br>
+                  }<br>
+               },<br>
+                  "type":"mobile",<br>
+                  "medium":<br>
+                     "number":"9876543210"<br>
+                  }<br>
+               },<br>
+                  "type":"pager",<br>
+                  "medium":<br>
+                     "number":"21"<br>
+                  }<br>
+               },<br>
+                  "type":"emailaddress",<br>
+                  "medium":<br>
+                     "emailAddress":"cba@gmail.com"<br>
+                  }<br>
+               }<br>
+            ]<br>
+         }<br>
+      }<br>
+   ],<br>
+   "note":[<br>
+         "text":"worklog test description",<br>
+         "noteType":"worklog",<br>
+         "summary":"worklog test description_longdescription",<br>
+         "logtype":"CLIENTNOTE"<br>
+      },<br>
+         "text":"worklog test description",<br>
+         "noteType":"worklog",<br>
+         "summary":"worklog test description_longdescription",<br>
+         "logtype":"CLIENTNOTE"<br>
+      }<br>
+   ]<br>
+}</pre>
+						</div>
+						<div>
+
+							<span>
+
+        <div class="package-phone-desc-items-heading txtBold margin-20-top">Path</div>
+    </span> <span>get /hub/{id}</span>
+
+							<div class="spacer30"></div>
+
+							<div class="borderGrayLight6">
+								<label>
+            <div class="package-phone-desc-items-heading txtBold margin-20-top margin-20-left">Parameters</div>
+        </label>
+
+								<div class="table-responsive">
+									<table style="width:100%">
+
+										<tbody>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">
+													ID
+												</td>
+												<td class="pad-10-bottom pad-10-top" style="padding-left: 40px">
+													Hub ID
+												</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width:200px">Required In Query</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width:200px">string</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td class="pad-10-bottom pad-20-left" style="width:200px"></td>
+												<td class="pad-10-bottom pad-30-left"></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+							</div>
+							<div class="spacer30"></div>
+							<div class="borderGrayLight6">
+
+								<label>
+            <div class="package-phone-desc-items-heading txtBold margin-20-top margin-20-left">Response</div>
+        </label>
+
+								<div class="table-responsive">
+									<table style="width:100%">
+
+										<tbody>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">200 </td>
+												<td class="pad-10-bottom pad-10-top " style="padding-left: 40px">Success</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">404 </td>
+												<td class="pad-10-bottom pad-10-top " style="padding-left: 40px">Bad Request</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">401 </td>
+												<td class="pad-10-bottom pad-10-top " style="padding-left: 40px">Unauthorized</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">403 </td>
+												<td class="pad-10-bottom pad-10-top " style="padding-left: 40px">Forbidden</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">500 </td>
+												<td class="pad-10-bottom pad-10-top " style="padding-left: 40px">Internal Server Error</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td></td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+
+								</div>
+
+
+
+							</div>
+							<div class="spacer30"></div>
+						</div>
+					</lightning-tabset>
+				</lightning-tab>
+				<lightning-tab label="GET /changeRequest">
+					<lightning-tabset active-tab-value="one">
+						<lightning-tab label="Curl" value="one">
+							<label>
+                                                            <span style="text-underline-position:auto;">
+
+                                                                <div class="package-phone-desc-items-heading txtBold ">Example Request</div>
+                                                            </span>
+                                                        </label>
+							<code class="pre pad-5">
+                                                            <pre  class="scrollAdjust" style="height:165px">curl --request GET \<br>
+--url '' \<br>
+--header 'accept: application/json' \<br>
+--header 'SECURITY_CREDENTIALS' \<br>
+--header 'x-external-system' \ (for use in sandbox mode only, pass any unique value &gt;= 8 chars)</pre>
+                                                        </code>
+						</lightning-tab>
+						<lightning-tab label="Python" value="two">
+							<label>
+                                                            <span style="text-underline-position:auto;">
+
+                                                                <div class="package-phone-desc-items-heading txtBold ">Example Request</div>
+                                                            </span>
+                                                        </label>
+							<code class="pre pad-5">
+                                                            <pre class="scrollAdjust" style="height:165px">import http.client<br>
+
+conn = http.client.HTTPSConnection("")<br>
+<br>
+headers = <br>
+   'SECURITY_CREDENTIALS',<br>
+    'accept': "application/json",<br>
+    'x-external-system' \ (for use in sandbox mode only, pass any unique <br>
+    value  &gt;= 8 chars)<br>
+    }<br>
+<br>
+conn.request("GET", " ", headers=headers)<br>
+<br>
+res = conn.getresponse()<br>
+data = res.read()<br>
+
+print(data.decode("utf-8"))</pre>
+                                                        </code>
+						</lightning-tab>
+						<lightning-tab label="PHP" value="three">
+							<label>
+                                                            <span style="text-underline-position:auto;">
+
+                                                                <div class="package-phone-desc-items-heading txtBold ">Example Request</div>
+                                                            </span>
+                                                        </label>
+							<code class="pre pad-5">
+                                                            <pre class="scrollAdjust" style="height:165px">&lt;?php<br>
+
+$curl = curl_init();<br>
+<br>
+curl_setopt_array($curl, array(<br>
+  CURLOPT_URL =&gt; " ",<br>
+  CURLOPT_RETURNTRANSFER =&gt; true,<br>
+  CURLOPT_ENCODING =&gt; "",<br>
+  CURLOPT_MAXREDIRS =&gt; 10,<br>
+  CURLOPT_TIMEOUT =&gt; 30,<br>
+  CURLOPT_HTTP_VERSION =&gt; CURL_HTTP_VERSION_1_1,<br>
+  CURLOPT_CUSTOMREQUEST =&gt; "GET",<br>
+  CURLOPT_HTTPHEADER =&gt; array(<br>
+    "accept: application/json",<br>
+    'SECURITY_CREDENTIALS',<br>
+    'x-external-system' \ (for use in sandbox mode only, pass any unique <br>
+      value &gt;= 8 chars)<br>
+  ),<br>
+));<br>
+<br>
+$response = curl_exec($curl);<br>
+$err = curl_error($curl);<br>
+<br>
+curl_close($curl);<br>
+<br>
+if ($err) {<br>
+  echo "cURL Error #:" . $err;<br>
+} else {<br>
+  echo $response;<br>
+}</pre>
+                                                        </code>
+						</lightning-tab>
+						<lightning-tab label="JAVA" value="four">
+							<label>
+                                                            <span style="text-underline-position:auto;">
+
+                                                                <div class="package-phone-desc-items-heading txtBold ">Example Request</div>
+                                                            </span>
+                                                        </label>
+							<code class="pre pad-5">
+                                                            <pre class="scrollAdjust" style="height:165px">// OkHttpClient from http://square.github.io/okhttp/<br>
+
+OkHttpClient client = new OkHttpClient();<br>
+<br>
+Request request = new Request.Builder()<br>
+  .url(" ")<br>
+  .get()<br>
+  .addHeader('SECURITY_CREDENTIALS')<br>
+  .addHeader("accept", "application/json")<br>
+  .addHeader('x-external-system' \ (for use in sandbox mode only, pass any <br>
+   unique value &gt;= 8 chars))<br>
+  .build();<br>
+<br>
+Response response = client.newCall(request).execute();</pre>
+                                                        </code>
+						</lightning-tab>
+						<label>
+                                                            <span style="text-underline-position:auto;">
+                                                                <div class="spacer10"></div>
+
+                                                                <div class="package-phone-desc-items-heading txtBold ">Example Response</div>
+                                                            </span>
+                                                        </label>
+						<div class="pre pad-5">
+							<pre class="scrollAdjust">[<br>
+   {<br>
+      "description":"D353 – Changement de configuration dans un coupe-feu",<br>
+      "externalId":"SR327032",<br>
+      "id":"mx_SR327032",<br>
+      "requestDate":"2020-05-05T09:42:30Z",<br>
+      "status":"acknowledged",<br>
+      "characteristic":[<br>
+         {<br>
+            "name":"ZONE",<br>
+            "value":"INTRA"<br>
+         },<br>
+         {<br>
+            "name":"classStructureClassificationId",<br>
+            "value":"410855050302"<br>
+         }<br>
+      ],<br>
+      "relatedParty":[<br>
+         {<br>
+            "id":"TESTUSER@DOMAIN",<br>
+            "href":"_",<br>
+            "role":"Originator",<br>
+            "name":"cc or"<br>
+         },<br>
+         {<br>
+            "id":"mx_GTDE",<br>
+            "href":"_",<br>
+            "role":"Customer"<br>
+         }<br>
+      ],<br>
+      "category":[<br>
+         {<br>
+            "id":"NSMIS"<br>
+         }<br>
+      ],<br>
+      "note":[<br>
+         
+      ]<br>
+   }<br>
+]</pre>
+						</div>
+						<div>
+
+							<span>
+
+        <div class="package-phone-desc-items-heading txtBold margin-20-top">Path</div>
+    </span> <span>get /hub/{id}</span>
+
+							<div class="spacer30"></div>
+
+							<div class="borderGrayLight6">
+								<label>
+            <div class="package-phone-desc-items-heading txtBold margin-20-top margin-20-left">Parameters</div>
+        </label>
+
+								<div class="table-responsive">
+									<table style="width:100%">
+
+										<tbody>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">
+													ID
+												</td>
+												<td class="pad-10-bottom pad-10-top" style="padding-left: 40px">
+													Hub ID
+												</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width:200px">Required In Query</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width:200px">string</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td class="pad-10-bottom pad-20-left" style="width:200px"></td>
+												<td class="pad-10-bottom pad-30-left"></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+							</div>
+							<div class="spacer30"></div>
+							<div class="borderGrayLight6">
+
+								<label>
+            <div class="package-phone-desc-items-heading txtBold margin-20-top margin-20-left">Response</div>
+        </label>
+
+								<div class="table-responsive">
+									<table style="width:100%">
+
+										<tbody>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">200 </td>
+												<td class="pad-10-bottom pad-10-top " style="padding-left: 40px">Success</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">404 </td>
+												<td class="pad-10-bottom pad-10-top " style="padding-left: 40px">Bad Request</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">401 </td>
+												<td class="pad-10-bottom pad-10-top " style="padding-left: 40px">Unauthorized</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">403 </td>
+												<td class="pad-10-bottom pad-10-top " style="padding-left: 40px">Forbidden</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">500 </td>
+												<td class="pad-10-bottom pad-10-top " style="padding-left: 40px">Internal Server Error</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td></td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+
+								</div>
+
+
+
+							</div>
+							<div class="spacer30"></div>
+						</div>
+					</lightning-tabset>
+				</lightning-tab>
+				<lightning-tab label="POST /changeRequest">
+					<lightning-tabset active-tab-value="one">
+						<lightning-tab label="Curl" value="one">
+							<label>
+                                                            <span style="text-underline-position:auto;">
+
+                                                                <div class="package-phone-desc-items-heading txtBold ">Example Request</div>
+                                                            </span>
+                                                        </label>
+							<code class="pre pad-5">
+                                                            <pre class="scrollAdjust" style="height:165px">curl --request POST \<br>
+  --url '' \<br>
+  --header 'accept: application/json' \<br>
+  --header 'content-type: application/json' \<br>
+  --header 'SECURITY_CREDENTIALS' \<br>
+  --header 'x-external-system' \ (for use in sandbox mode only, pass any <br>
+     unique value &gt;= 8 chars)<br>
+  --data '"actualEndTime":"2017-12-17T04:20:38.464Z","actualStartTime":"2021-01-08T10:17:19.714Z","budget":"sufkun","channel":"ebtetu","completionDate":"2008-07-20T17:04:41.986Z","currency":"MXN","description":"Sidjepbar tuip haw mashuk vuluw hibru habses wec ke ru zi facpupru re utsefliv ocidin.","externalId":"6399882011082752","impact":"dugo","plannedEndTime":"2008-05-27T04:10:42.216Z","plannedStartTime":"2019-07-10T03:53:10.503Z","priority":"foze","requestDate":"2013-03-29T14:02:45.993Z","requestType":"ipaavju","risk":"wovuis","riskMitigationPlan":"fibwi","riskValue":"53.01","scheduledDate":"2010-02-14T15:55:11.269Z","status":"lanair","attachment":["id":"8916794299383808","href":"numlop","size":5.39984186,"name":"Ola Figueroa","description":"Gujof fi tutzatgud luzuzca vuolazo uk bepug tajoim gensez iloupivu huh hug pujir levaw zuvwa hega fop riva.","sizeUnit":"hepokdev","mimeType":"kocpas","url":"http://za.mg/duhbarbac","validFor":"startDateTime":"2010-08-22T18:14:54.612Z","endDateTime":"2003-09-08T20:36:26.629Z"},"attachmentType":"isajci","content":"jumpe","@type":"wiilu","@baseType":"Attachment","@schemaLocation":"ilip"}],"workLog":"createDateTime":"2005-03-05T18:48:45.121Z","description":"Ek ri laib su hortemilo avu covtefur hok ku rah revditene mawogsuv cisdumkoj ih.","lastUpdateDateTime":"Price","record":["dateTime":"2006-05-18T03:52:39.973Z","description":"Zafan kor edimigsed garap ifkiji pemciji we dodhuw soma lar ivi kijfe akabuv jamto nipmeutu te ope retakjog.","supportPerson":"hiwogta","@type":"zitma","@schemaLocation":"soczelvu","@baseType":"lucp"}],"@type":"maug","@schemaLocation":"juwtohet","@baseType":"lomuf"},"incident":["description":"Ahu riol newon noudevig ozoho ojta cus nikal sace moihbew osuenvid wepkeg.","name":"Beatrice Figueroa","@type":"fuhk","@schemaLocation":"otane","@baseType":"dovub"}],"specification":"description":"Kaltarag vod bic kec wu kafekru mo iti ofoariku huc utze iz leorepi laas jejo raleb hik mes.","href":"cura","id":"1134850807431168","name":"Raymond Evans","validFor":"startDateTime":"2020-07-19T17:37:40.080Z","endDateTime":"2004-12-01T00:57:08.080Z"},"@type":"raehhiwi","@schemaLocation":"zipab","@baseType":"zepuzad"},"impactEntity":["description":"Pefa idrah wi vajlokmi zemjumo ni eve ko lor un lut ujupetos utol soziv be uzu bek zopat.","href":"nopubok","id":"1816054724558848","@referredType":"fuguz"}],"characteristic":["name":"Dora Lopez","valueType":"96.48","value":"97.63","@type":"emmoww","@baseType":"azcaji","@schemaLocation":"cobatv"}],"targetEntity":["description":"Hiw iha zoez daakigeg wira pulupupo cunefi netji ema ugomijpul ge jefef.","href":"niff","id":"8954506146480128","@referredType":"fufdeh"}],"relatedParty":["id":6848288766558208}],"resolution":"code":"beewwog","description":"Feppi ho negni awtuvebu ma atoevuhih pabotivus riw baghu za rapvin rawona razezsa cedce.","name":"Lizzie Sherman","task":["id":5921264338206720}],"@type":"cekhedim","@schemaLocation":"deccigf","@baseType":"dedmom"},"sla":["href":"haeritl","id":"3648181369831424","name":"Georgia Oliver","@referredType":"zanojn"}],"relatedChangeRequest":["correlation":"bagp","description":"Mojuhrop vuiw musmapud lamwe zuig le zolca ceruvdog cov ririrat mapponac ci buw ohazavvis epuma gaivo ciuz.","href":"ziggi","id":"8082253406011392","@referredType":"fefo"}],"category":["href":"agav","id":"1898018542452736","name":"Edward Drake","@referredType":"alawevu"}],"note":["id":746697785344000}],"location":"id":"8803511634493440","href":"wefpegij","name":"Erik Ruiz","role":"ofopja","@type":"peajicat","@baseType":"Place","@referredType":"leku","@schemaLocation":"fetaju","characteristic":["name":"Isabelle Curry","valueType":"74.72","value":"11.03","@type":"cahsioz","@baseType":"derud","@schemaLocation":"netoku"}],"geographicAddress":"id":"4916483306029056","href":"inapaupi","streetNr":"Refi Ridge","streetNrSuffix":"Eceeco Pass","streetNrLast":"Zahek Center","streetNrLastSuffix":"Wuhpi Path","streetName":"Guha Ridge","streetType":"Romwu Highway","streetSuffix":"Detepa Heights","postcode":"R7P 2Y2","locality":"lekia","city":"Feezutap","stateOrProvince":"NT","country":"Iran","@type":"zazzen","@baseType":"GeographicAddress","@schemaLocation":"zajojah","geographicLocationRefOrValue":"id":"3392702773198848","href":"pesozalo","name":"Francis Ruiz","geometryType":"ihve","accuracy":"6011661230052816","spatialRef":"jehu","@type":"fufz","@schemaLocation":"nupideir","geometry":["x":"tiwr","y":"igesu","z":"feawovo"}]},"geographicSubAddress":["id":"6257711272427520","href":"foogobi","type":"okipireo","name":"Owen Hill","subUnitType":"gius","subUnitNumber":"961131118067712","levelType":"likijaco","levelNumber":"1194275085746176","buildingName":"Myrtie Hall","privateStreetNumber":"Awji Point","privateStreetName":"Malo Drive","@type":"binelput","@baseType":"GeographicSubAddress","@schemaLocation":"udevbifo"}],"description":"Etigurif gajcorvo pukeh jujalgum pi doidvu zihnoho od udpacup mah sogos ga va ruppo.","addressLine":"1980 Heplo Way","addressLine2":"584 Veace Lane","type":"tebo","externalId":"12600192532480","sourceSystemId":"6297252624596992","validated":false},"geographicSite":"id":"4283959187865600","href":"gike","name":"William Norton","description":"Nora ku tut nomtaari if fec fu zomvomap zerla wara cu ju.","code":"izekuku","status":"zekuder","@baseType":"GeographicSite","@type":"ipodog","@schemaLocation":"siwasu","address":"id":"991997319970816","href":"baawe","streetNr":"Haon Way","streetNrSuffix":"Gofcob Road","streetNrLast":"Otiiv Pike","streetNrLastSuffix":"Wutnos Extension","streetName":"Ranmo Ridge","streetType":"Jahvas Pass","streetSuffix":"Mezdu Court","postcode":"R7I 4C8","locality":"asevai","city":"Zokmece","stateOrProvince":"NL","country":"Syria","@type":"gihwuj","@baseType":"GeographicAddress","@schemaLocation":"kibnumv","geographicLocationRefOrValue":"id":"2942866018009088","href":"larojorg","name":"Kenneth Ramos","geometryType":"gojuzj","accuracy":"5610099890191060","spatialRef":"omogunza","@type":"fajun","@schemaLocation":"pove","geometry":["x":"zohacg","y":"lacofveu","z":"sunluzig"}]},"geographicSubAddress":["id":"5763741570301952","href":"hejgu","type":"egwec","name":"Mabelle Jenkins","subUnitType":"taccerdi","subUnitNumber":"4464800140623872","levelType":"acuzima","levelNumber":"7157467358167040","buildingName":"Herbert Jackson","privateStreetNumber":"Suvis Grove","privateStreetName":"Fimig Circle","@type":"civaligv","@baseType":"GeographicSubAddress","@schemaLocation":"safowuhz"}],"description":"Sala ubuwu wom gutaro rup di ijku beobji cu mi heni bipluwoze tikhuk nurgu wa rog.","addressLine":"169 Rijnet Heights","addressLine2":"1795 Wevbup Loop","type":"ugra","externalId":"1908364906856448","sourceSystemId":"5691945504473088","validated":false},"geographicLocation":"id":"3089285053939712","href":"zagiev","name":"Dollie Chambers","geometryType":"nodu","accuracy":"4026780268792354","spatialRef":"nefu","@type":"ekui","@schemaLocation":"tulocehi","geometry":["x":"lumgeztu","y":"homuhv","z":"ovopioji"}]},"calendar":["status":"adedow","day":"cimsajuf","timeZone":"03:25","hourPeriod":["startHour":"22","endHour":"07"}]}],"relatedParty":["id":1837481802596352}],"siteRelationship":["id":"5359267760570368","href":"rehan","type":"gunem","role":"evebpep","validFor":"startDateTime":"2007-09-10T06:49:11.621Z","endDateTime":"2001-04-18T01:11:36.787Z"}}],"externalId":"3968130051211264","sourceSystemId":"7617446825426944","tags":["mosadwuh"],"onSiteSubAddress":["id":"5551714008563712","href":"valakuo","type":"okvo","name":"Don Bass","subUnitType":"enpavjo","subUnitNumber":"4862629388484608","levelType":"woiznu","levelNumber":"4438784399638528","buildingName":"Celia Cole","privateStreetNumber":"Sudsi Heights","privateStreetName":"Siches Lane","@type":"dutasiv","@baseType":"GeographicSubAddress","@schemaLocation":"avludfud"}]}},"@type":"cirgugta","@schemaLocation":"ojainijo","@baseType":"opuculb"}'</pre>
+                                                        </code>
+						</lightning-tab>
+						<lightning-tab label="Python" value="two">
+							<label>
+                                                            <span style="text-underline-position:auto;">
+
+                                                                <div class="package-phone-desc-items-heading txtBold ">Example Request</div>
+                                                            </span>
+                                                        </label>
+							<code class="pre pad-5">
+                                                            <pre class="scrollAdjust" style="height:165px">import http.client<br>
+<br>
+conn = http.client.HTTPSConnection("")<br>
+<br>
+payload = "\"actualEndTime\":\"2017-12-17T04:20:38.464Z\",\"actualStartTime\":\"2021-01-08T10:17:19.714Z\",\"budget\":\"sufkun\",\"channel\":\"ebtetu\",\"completionDate\":\"2008-07-20T17:04:41.986Z\",\"currency\":\"MXN\",\"description\":\"Sidjepbar tuip haw mashuk vuluw hibru habses wec ke ru zi facpupru re utsefliv ocidin.\",\"externalId\":\"6399882011082752\",\"impact\":\"dugo\",\"plannedEndTime\":\"2008-05-27T04:10:42.216Z\",\"plannedStartTime\":\"2019-07-10T03:53:10.503Z\",\"priority\":\"foze\",\"requestDate\":\"2013-03-29T14:02:45.993Z\",\"requestType\":\"ipaavju\",\"risk\":\"wovuis\",\"riskMitigationPlan\":\"fibwi\",\"riskValue\":\"53.01\",\"scheduledDate\":\"2010-02-14T15:55:11.269Z\",\"status\":\"lanair\",\"attachment\":[\"id\":\"8916794299383808\",\"href\":\"numlop\",\"size\":5.39984186,\"name\":\"Ola Figueroa\",\"description\":\"Gujof fi tutzatgud luzuzca vuolazo uk bepug tajoim gensez iloupivu huh hug pujir levaw zuvwa hega fop riva.\",\"sizeUnit\":\"hepokdev\",\"mimeType\":\"kocpas\",\"url\":\"http://za.mg/duhbarbac\",\"validFor\":\"startDateTime\":\"2010-08-22T18:14:54.612Z\",\"endDateTime\":\"2003-09-08T20:36:26.629Z\"},\"attachmentType\":\"isajci\",\"content\":\"jumpe\",\"@type\":\"wiilu\",\"@baseType\":\"Attachment\",\"@schemaLocation\":\"ilip\"}],\"workLog\":\"createDateTime\":\"2005-03-05T18:48:45.121Z\",\"description\":\"Ek ri laib su hortemilo avu covtefur hok ku rah revditene mawogsuv cisdumkoj ih.\",\"lastUpdateDateTime\":\"Price\",\"record\":[\"dateTime\":\"2006-05-18T03:52:39.973Z\",\"description\":\"Zafan kor edimigsed garap ifkiji pemciji we dodhuw soma lar ivi kijfe akabuv jamto nipmeutu te ope retakjog.\",\"supportPerson\":\"hiwogta\",\"@type\":\"zitma\",\"@schemaLocation\":\"soczelvu\",\"@baseType\":\"lucp\"}],\"@type\":\"maug\",\"@schemaLocation\":\"juwtohet\",\"@baseType\":\"lomuf\"},\"incident\":[\"description\":\"Ahu riol newon noudevig ozoho ojta cus nikal sace moihbew osuenvid wepkeg.\",\"name\":\"Beatrice Figueroa\",\"@type\":\"fuhk\",\"@schemaLocation\":\"otane\",\"@baseType\":\"dovub\"}],\"specification\":\"description\":\"Kaltarag vod bic kec wu kafekru mo iti ofoariku huc utze iz leorepi laas jejo raleb hik mes.\",\"href\":\"cura\",\"id\":\"1134850807431168\",\"name\":\"Raymond Evans\",\"validFor\":\"startDateTime\":\"2020-07-19T17:37:40.080Z\",\"endDateTime\":\"2004-12-01T00:57:08.080Z\"},\"@type\":\"raehhiwi\",\"@schemaLocation\":\"zipab\",\"@baseType\":\"zepuzad\"},\"impactEntity\":[\"description\":\"Pefa idrah wi vajlokmi zemjumo ni eve ko lor un lut ujupetos utol soziv be uzu bek zopat.\",\"href\":\"nopubok\",\"id\":\"1816054724558848\",\"@referredType\":\"fuguz\"}],\"characteristic\":[\"name\":\"Dora Lopez\",\"valueType\":\"96.48\",\"value\":\"97.63\",\"@type\":\"emmoww\",\"@baseType\":\"azcaji\",\"@schemaLocation\":\"cobatv\"}],\"targetEntity\":[\"description\":\"Hiw iha zoez daakigeg wira pulupupo cunefi netji ema ugomijpul ge jefef.\",\"href\":\"niff\",\"id\":\"8954506146480128\",\"@referredType\":\"fufdeh\"}],\"relatedParty\":[\"id\":6848288766558208}],\"resolution\":\"code\":\"beewwog\",\"description\":\"Feppi ho negni awtuvebu ma atoevuhih pabotivus riw baghu za rapvin rawona razezsa cedce.\",\"name\":\"Lizzie Sherman\",\"task\":[\"id\":5921264338206720}],\"@type\":\"cekhedim\",\"@schemaLocation\":\"deccigf\",\"@baseType\":\"dedmom\"},\"sla\":[\"href\":\"haeritl\",\"id\":\"3648181369831424\",\"name\":\"Georgia Oliver\",\"@referredType\":\"zanojn\"}],\"relatedChangeRequest\":[\"correlation\":\"bagp\",\"description\":\"Mojuhrop vuiw musmapud lamwe zuig le zolca ceruvdog cov ririrat mapponac ci buw ohazavvis epuma gaivo ciuz.\",\"href\":\"ziggi\",\"id\":\"8082253406011392\",\"@referredType\":\"fefo\"}],\"category\":[\"href\":\"agav\",\"id\":\"1898018542452736\",\"name\":\"Edward Drake\",\"@referredType\":\"alawevu\"}],\"note\":[\"id\":746697785344000}],\"location\":\"id\":\"8803511634493440\",\"href\":\"wefpegij\",\"name\":\"Erik Ruiz\",\"role\":\"ofopja\",\"@type\":\"peajicat\",\"@baseType\":\"Place\",\"@referredType\":\"leku\",\"@schemaLocation\":\"fetaju\",\"characteristic\":[\"name\":\"Isabelle Curry\",\"valueType\":\"74.72\",\"value\":\"11.03\",\"@type\":\"cahsioz\",\"@baseType\":\"derud\",\"@schemaLocation\":\"netoku\"}],\"geographicAddress\":\"id\":\"4916483306029056\",\"href\":\"inapaupi\",\"streetNr\":\"Refi Ridge\",\"streetNrSuffix\":\"Eceeco Pass\",\"streetNrLast\":\"Zahek Center\",\"streetNrLastSuffix\":\"Wuhpi Path\",\"streetName\":\"Guha Ridge\",\"streetType\":\"Romwu Highway\",\"streetSuffix\":\"Detepa Heights\",\"postcode\":\"R7P 2Y2\",\"locality\":\"lekia\",\"city\":\"Feezutap\",\"stateOrProvince\":\"NT\",\"country\":\"Iran\",\"@type\":\"zazzen\",\"@baseType\":\"GeographicAddress\",\"@schemaLocation\":\"zajojah\",\"geographicLocationRefOrValue\":\"id\":\"3392702773198848\",\"href\":\"pesozalo\",\"name\":\"Francis Ruiz\",\"geometryType\":\"ihve\",\"accuracy\":\"6011661230052816\",\"spatialRef\":\"jehu\",\"@type\":\"fufz\",\"@schemaLocation\":\"nupideir\",\"geometry\":[\"x\":\"tiwr\",\"y\":\"igesu\",\"z\":\"feawovo\"}]},\"geographicSubAddress\":[\"id\":\"6257711272427520\",\"href\":\"foogobi\",\"type\":\"okipireo\",\"name\":\"Owen Hill\",\"subUnitType\":\"gius\",\"subUnitNumber\":\"961131118067712\",\"levelType\":\"likijaco\",\"levelNumber\":\"1194275085746176\",\"buildingName\":\"Myrtie Hall\",\"privateStreetNumber\":\"Awji Point\",\"privateStreetName\":\"Malo Drive\",\"@type\":\"binelput\",\"@baseType\":\"GeographicSubAddress\",\"@schemaLocation\":\"udevbifo\"}],\"description\":\"Etigurif gajcorvo pukeh jujalgum pi doidvu zihnoho od udpacup mah sogos ga va ruppo.\",\"addressLine\":\"1980 Heplo Way\",\"addressLine2\":\"584 Veace Lane\",\"type\":\"tebo\",\"externalId\":\"12600192532480\",\"sourceSystemId\":\"6297252624596992\",\"validated\":false},\"geographicSite\":\"id\":\"4283959187865600\",\"href\":\"gike\",\"name\":\"William Norton\",\"description\":\"Nora ku tut nomtaari if fec fu zomvomap zerla wara cu ju.\",\"code\":\"izekuku\",\"status\":\"zekuder\",\"@baseType\":\"GeographicSite\",\"@type\":\"ipodog\",\"@schemaLocation\":\"siwasu\",\"address\":\"id\":\"991997319970816\",\"href\":\"baawe\",\"streetNr\":\"Haon Way\",\"streetNrSuffix\":\"Gofcob Road\",\"streetNrLast\":\"Otiiv Pike\",\"streetNrLastSuffix\":\"Wutnos Extension\",\"streetName\":\"Ranmo Ridge\",\"streetType\":\"Jahvas Pass\",\"streetSuffix\":\"Mezdu Court\",\"postcode\":\"R7I 4C8\",\"locality\":\"asevai\",\"city\":\"Zokmece\",\"stateOrProvince\":\"NL\",\"country\":\"Syria\",\"@type\":\"gihwuj\",\"@baseType\":\"GeographicAddress\",\"@schemaLocation\":\"kibnumv\",\"geographicLocationRefOrValue\":\"id\":\"2942866018009088\",\"href\":\"larojorg\",\"name\":\"Kenneth Ramos\",\"geometryType\":\"gojuzj\",\"accuracy\":\"5610099890191060\",\"spatialRef\":\"omogunza\",\"@type\":\"fajun\",\"@schemaLocation\":\"pove\",\"geometry\":[\"x\":\"zohacg\",\"y\":\"lacofveu\",\"z\":\"sunluzig\"}]},\"geographicSubAddress\":[\"id\":\"5763741570301952\",\"href\":\"hejgu\",\"type\":\"egwec\",\"name\":\"Mabelle Jenkins\",\"subUnitType\":\"taccerdi\",\"subUnitNumber\":\"4464800140623872\",\"levelType\":\"acuzima\",\"levelNumber\":\"7157467358167040\",\"buildingName\":\"Herbert Jackson\",\"privateStreetNumber\":\"Suvis Grove\",\"privateStreetName\":\"Fimig Circle\",\"@type\":\"civaligv\",\"@baseType\":\"GeographicSubAddress\",\"@schemaLocation\":\"safowuhz\"}],\"description\":\"Sala ubuwu wom gutaro rup di ijku beobji cu mi heni bipluwoze tikhuk nurgu wa rog.\",\"addressLine\":\"169 Rijnet Heights\",\"addressLine2\":\"1795 Wevbup Loop\",\"type\":\"ugra\",\"externalId\":\"1908364906856448\",\"sourceSystemId\":\"5691945504473088\",\"validated\":false},\"geographicLocation\":\"id\":\"3089285053939712\",\"href\":\"zagiev\",\"name\":\"Dollie Chambers\",\"geometryType\":\"nodu\",\"accuracy\":\"4026780268792354\",\"spatialRef\":\"nefu\",\"@type\":\"ekui\",\"@schemaLocation\":\"tulocehi\",\"geometry\":[\"x\":\"lumgeztu\",\"y\":\"homuhv\",\"z\":\"ovopioji\"}]},\"calendar\":[\"status\":\"adedow\",\"day\":\"cimsajuf\",\"timeZone\":\"03:25\",\"hourPeriod\":[\"startHour\":\"22\",\"endHour\":\"07\"}]}],\"relatedParty\":[\"id\":1837481802596352}],\"siteRelationship\":[\"id\":\"5359267760570368\",\"href\":\"rehan\",\"type\":\"gunem\",\"role\":\"evebpep\",\"validFor\":\"startDateTime\":\"2007-09-10T06:49:11.621Z\",\"endDateTime\":\"2001-04-18T01:11:36.787Z\"}}],\"externalId\":\"3968130051211264\",\"sourceSystemId\":\"7617446825426944\",\"tags\":[\"mosadwuh\"],\"onSiteSubAddress\":[\"id\":\"5551714008563712\",\"href\":\"valakuo\",\"type\":\"okvo\",\"name\":\"Don Bass\",\"subUnitType\":\"enpavjo\",\"subUnitNumber\":\"4862629388484608\",\"levelType\":\"woiznu\",\"levelNumber\":\"4438784399638528\",\"buildingName\":\"Celia Cole\",\"privateStreetNumber\":\"Sudsi Heights\",\"privateStreetName\":\"Siches Lane\",\"@type\":\"dutasiv\",\"@baseType\":\"GeographicSubAddress\",\"@schemaLocation\":\"avludfud\"}]}},\"@type\":\"cirgugta\",\"@schemaLocation\":\"ojainijo\",\"@baseType\":\"opuculb\"}"<br>
+<br>
+headers = <br>
+    'SECURITY_CREDENTIALS',<br>
+    'content-type': "application/json",<br>
+    'accept': "application/json",<br>
+    'x-external-system' \ (for use in sandbox mode only, pass any unique <br>
+     value &gt;= 8 chars)<br>
+    }<br>
+<br>
+conn.request("POST", "", payload, headers)<br>
+<br>
+res = conn.getresponse()<br>
+data = res.read()<br>
+<br>
+print(data.decode("utf-8"))</pre>
+                                                        </code>
+						</lightning-tab>
+						<lightning-tab label="PHP" value="three">
+							<label>
+                                                            <span style="text-underline-position:auto;">
+
+                                                                <div class="package-phone-desc-items-heading txtBold ">Example Request</div>
+                                                            </span>
+                                                        </label>
+							<code class="pre pad-5">
+                                                            <pre class="scrollAdjust" style="height:165px">&lt;?php<br>
+<br>
+$curl = curl_init();<br>
+<br>
+curl_setopt_array($curl, array(<br>
+  CURLOPT_URL =&gt; "",<br>
+  CURLOPT_RETURNTRANSFER =&gt; true,<br>
+  CURLOPT_ENCODING =&gt; "",<br>
+  CURLOPT_MAXREDIRS =&gt; 10,<br>
+  CURLOPT_TIMEOUT =&gt; 30,<br>
+  CURLOPT_HTTP_VERSION =&gt; CURL_HTTP_VERSION_1_1,<br>
+  CURLOPT_CUSTOMREQUEST =&gt; "POST",<br>
+  CURLOPT_POSTFIELDS =&gt; "\"actualEndTime\":\"2017-12-17T04:20:38.464Z\",\"actualStartTime\":\"2021-01-08T10:17:19.714Z\",\"budget\":\"sufkun\",\"channel\":\"ebtetu\",\"completionDate\":\"2008-07-20T17:04:41.986Z\",\"currency\":\"MXN\",\"description\":\"Sidjepbar tuip haw mashuk vuluw hibru habses wec ke ru zi facpupru re utsefliv ocidin.\",\"externalId\":\"6399882011082752\",\"impact\":\"dugo\",\"plannedEndTime\":\"2008-05-27T04:10:42.216Z\",\"plannedStartTime\":\"2019-07-10T03:53:10.503Z\",\"priority\":\"foze\",\"requestDate\":\"2013-03-29T14:02:45.993Z\",\"requestType\":\"ipaavju\",\"risk\":\"wovuis\",\"riskMitigationPlan\":\"fibwi\",\"riskValue\":\"53.01\",\"scheduledDate\":\"2010-02-14T15:55:11.269Z\",\"status\":\"lanair\",\"attachment\":[\"id\":\"8916794299383808\",\"href\":\"numlop\",\"size\":5.39984186,\"name\":\"Ola Figueroa\",\"description\":\"Gujof fi tutzatgud luzuzca vuolazo uk bepug tajoim gensez iloupivu huh hug pujir levaw zuvwa hega fop riva.\",\"sizeUnit\":\"hepokdev\",\"mimeType\":\"kocpas\",\"url\":\"http://za.mg/duhbarbac\",\"validFor\":\"startDateTime\":\"2010-08-22T18:14:54.612Z\",\"endDateTime\":\"2003-09-08T20:36:26.629Z\"},\"attachmentType\":\"isajci\",\"content\":\"jumpe\",\"@type\":\"wiilu\",\"@baseType\":\"Attachment\",\"@schemaLocation\":\"ilip\"}],\"workLog\":\"createDateTime\":\"2005-03-05T18:48:45.121Z\",\"description\":\"Ek ri laib su hortemilo avu covtefur hok ku rah revditene mawogsuv cisdumkoj ih.\",\"lastUpdateDateTime\":\"Price\",\"record\":[\"dateTime\":\"2006-05-18T03:52:39.973Z\",\"description\":\"Zafan kor edimigsed garap ifkiji pemciji we dodhuw soma lar ivi kijfe akabuv jamto nipmeutu te ope retakjog.\",\"supportPerson\":\"hiwogta\",\"@type\":\"zitma\",\"@schemaLocation\":\"soczelvu\",\"@baseType\":\"lucp\"}],\"@type\":\"maug\",\"@schemaLocation\":\"juwtohet\",\"@baseType\":\"lomuf\"},\"incident\":[\"description\":\"Ahu riol newon noudevig ozoho ojta cus nikal sace moihbew osuenvid wepkeg.\",\"name\":\"Beatrice Figueroa\",\"@type\":\"fuhk\",\"@schemaLocation\":\"otane\",\"@baseType\":\"dovub\"}],\"specification\":\"description\":\"Kaltarag vod bic kec wu kafekru mo iti ofoariku huc utze iz leorepi laas jejo raleb hik mes.\",\"href\":\"cura\",\"id\":\"1134850807431168\",\"name\":\"Raymond Evans\",\"validFor\":\"startDateTime\":\"2020-07-19T17:37:40.080Z\",\"endDateTime\":\"2004-12-01T00:57:08.080Z\"},\"@type\":\"raehhiwi\",\"@schemaLocation\":\"zipab\",\"@baseType\":\"zepuzad\"},\"impactEntity\":[\"description\":\"Pefa idrah wi vajlokmi zemjumo ni eve ko lor un lut ujupetos utol soziv be uzu bek zopat.\",\"href\":\"nopubok\",\"id\":\"1816054724558848\",\"@referredType\":\"fuguz\"}],\"characteristic\":[\"name\":\"Dora Lopez\",\"valueType\":\"96.48\",\"value\":\"97.63\",\"@type\":\"emmoww\",\"@baseType\":\"azcaji\",\"@schemaLocation\":\"cobatv\"}],\"targetEntity\":[\"description\":\"Hiw iha zoez daakigeg wira pulupupo cunefi netji ema ugomijpul ge jefef.\",\"href\":\"niff\",\"id\":\"8954506146480128\",\"@referredType\":\"fufdeh\"}],\"relatedParty\":[\"id\":6848288766558208}],\"resolution\":\"code\":\"beewwog\",\"description\":\"Feppi ho negni awtuvebu ma atoevuhih pabotivus riw baghu za rapvin rawona razezsa cedce.\",\"name\":\"Lizzie Sherman\",\"task\":[\"id\":5921264338206720}],\"@type\":\"cekhedim\",\"@schemaLocation\":\"deccigf\",\"@baseType\":\"dedmom\"},\"sla\":[\"href\":\"haeritl\",\"id\":\"3648181369831424\",\"name\":\"Georgia Oliver\",\"@referredType\":\"zanojn\"}],\"relatedChangeRequest\":[\"correlation\":\"bagp\",\"description\":\"Mojuhrop vuiw musmapud lamwe zuig le zolca ceruvdog cov ririrat mapponac ci buw ohazavvis epuma gaivo ciuz.\",\"href\":\"ziggi\",\"id\":\"8082253406011392\",\"@referredType\":\"fefo\"}],\"category\":[\"href\":\"agav\",\"id\":\"1898018542452736\",\"name\":\"Edward Drake\",\"@referredType\":\"alawevu\"}],\"note\":[\"id\":746697785344000}],\"location\":\"id\":\"8803511634493440\",\"href\":\"wefpegij\",\"name\":\"Erik Ruiz\",\"role\":\"ofopja\",\"@type\":\"peajicat\",\"@baseType\":\"Place\",\"@referredType\":\"leku\",\"@schemaLocation\":\"fetaju\",\"characteristic\":[\"name\":\"Isabelle Curry\",\"valueType\":\"74.72\",\"value\":\"11.03\",\"@type\":\"cahsioz\",\"@baseType\":\"derud\",\"@schemaLocation\":\"netoku\"}],\"geographicAddress\":\"id\":\"4916483306029056\",\"href\":\"inapaupi\",\"streetNr\":\"Refi Ridge\",\"streetNrSuffix\":\"Eceeco Pass\",\"streetNrLast\":\"Zahek Center\",\"streetNrLastSuffix\":\"Wuhpi Path\",\"streetName\":\"Guha Ridge\",\"streetType\":\"Romwu Highway\",\"streetSuffix\":\"Detepa Heights\",\"postcode\":\"R7P 2Y2\",\"locality\":\"lekia\",\"city\":\"Feezutap\",\"stateOrProvince\":\"NT\",\"country\":\"Iran\",\"@type\":\"zazzen\",\"@baseType\":\"GeographicAddress\",\"@schemaLocation\":\"zajojah\",\"geographicLocationRefOrValue\":\"id\":\"3392702773198848\",\"href\":\"pesozalo\",\"name\":\"Francis Ruiz\",\"geometryType\":\"ihve\",\"accuracy\":\"6011661230052816\",\"spatialRef\":\"jehu\",\"@type\":\"fufz\",\"@schemaLocation\":\"nupideir\",\"geometry\":[\"x\":\"tiwr\",\"y\":\"igesu\",\"z\":\"feawovo\"}]},\"geographicSubAddress\":[\"id\":\"6257711272427520\",\"href\":\"foogobi\",\"type\":\"okipireo\",\"name\":\"Owen Hill\",\"subUnitType\":\"gius\",\"subUnitNumber\":\"961131118067712\",\"levelType\":\"likijaco\",\"levelNumber\":\"1194275085746176\",\"buildingName\":\"Myrtie Hall\",\"privateStreetNumber\":\"Awji Point\",\"privateStreetName\":\"Malo Drive\",\"@type\":\"binelput\",\"@baseType\":\"GeographicSubAddress\",\"@schemaLocation\":\"udevbifo\"}],\"description\":\"Etigurif gajcorvo pukeh jujalgum pi doidvu zihnoho od udpacup mah sogos ga va ruppo.\",\"addressLine\":\"1980 Heplo Way\",\"addressLine2\":\"584 Veace Lane\",\"type\":\"tebo\",\"externalId\":\"12600192532480\",\"sourceSystemId\":\"6297252624596992\",\"validated\":false},\"geographicSite\":\"id\":\"4283959187865600\",\"href\":\"gike\",\"name\":\"William Norton\",\"description\":\"Nora ku tut nomtaari if fec fu zomvomap zerla wara cu ju.\",\"code\":\"izekuku\",\"status\":\"zekuder\",\"@baseType\":\"GeographicSite\",\"@type\":\"ipodog\",\"@schemaLocation\":\"siwasu\",\"address\":\"id\":\"991997319970816\",\"href\":\"baawe\",\"streetNr\":\"Haon Way\",\"streetNrSuffix\":\"Gofcob Road\",\"streetNrLast\":\"Otiiv Pike\",\"streetNrLastSuffix\":\"Wutnos Extension\",\"streetName\":\"Ranmo Ridge\",\"streetType\":\"Jahvas Pass\",\"streetSuffix\":\"Mezdu Court\",\"postcode\":\"R7I 4C8\",\"locality\":\"asevai\",\"city\":\"Zokmece\",\"stateOrProvince\":\"NL\",\"country\":\"Syria\",\"@type\":\"gihwuj\",\"@baseType\":\"GeographicAddress\",\"@schemaLocation\":\"kibnumv\",\"geographicLocationRefOrValue\":\"id\":\"2942866018009088\",\"href\":\"larojorg\",\"name\":\"Kenneth Ramos\",\"geometryType\":\"gojuzj\",\"accuracy\":\"5610099890191060\",\"spatialRef\":\"omogunza\",\"@type\":\"fajun\",\"@schemaLocation\":\"pove\",\"geometry\":[\"x\":\"zohacg\",\"y\":\"lacofveu\",\"z\":\"sunluzig\"}]},\"geographicSubAddress\":[\"id\":\"5763741570301952\",\"href\":\"hejgu\",\"type\":\"egwec\",\"name\":\"Mabelle Jenkins\",\"subUnitType\":\"taccerdi\",\"subUnitNumber\":\"4464800140623872\",\"levelType\":\"acuzima\",\"levelNumber\":\"7157467358167040\",\"buildingName\":\"Herbert Jackson\",\"privateStreetNumber\":\"Suvis Grove\",\"privateStreetName\":\"Fimig Circle\",\"@type\":\"civaligv\",\"@baseType\":\"GeographicSubAddress\",\"@schemaLocation\":\"safowuhz\"}],\"description\":\"Sala ubuwu wom gutaro rup di ijku beobji cu mi heni bipluwoze tikhuk nurgu wa rog.\",\"addressLine\":\"169 Rijnet Heights\",\"addressLine2\":\"1795 Wevbup Loop\",\"type\":\"ugra\",\"externalId\":\"1908364906856448\",\"sourceSystemId\":\"5691945504473088\",\"validated\":false},\"geographicLocation\":\"id\":\"3089285053939712\",\"href\":\"zagiev\",\"name\":\"Dollie Chambers\",\"geometryType\":\"nodu\",\"accuracy\":\"4026780268792354\",\"spatialRef\":\"nefu\",\"@type\":\"ekui\",\"@schemaLocation\":\"tulocehi\",\"geometry\":[\"x\":\"lumgeztu\",\"y\":\"homuhv\",\"z\":\"ovopioji\"}]},\"calendar\":[\"status\":\"adedow\",\"day\":\"cimsajuf\",\"timeZone\":\"03:25\",\"hourPeriod\":[\"startHour\":\"22\",\"endHour\":\"07\"}]}],\"relatedParty\":[\"id\":1837481802596352}],\"siteRelationship\":[\"id\":\"5359267760570368\",\"href\":\"rehan\",\"type\":\"gunem\",\"role\":\"evebpep\",\"validFor\":\"startDateTime\":\"2007-09-10T06:49:11.621Z\",\"endDateTime\":\"2001-04-18T01:11:36.787Z\"}}],\"externalId\":\"3968130051211264\",\"sourceSystemId\":\"7617446825426944\",\"tags\":[\"mosadwuh\"],\"onSiteSubAddress\":[\"id\":\"5551714008563712\",\"href\":\"valakuo\",\"type\":\"okvo\",\"name\":\"Don Bass\",\"subUnitType\":\"enpavjo\",\"subUnitNumber\":\"4862629388484608\",\"levelType\":\"woiznu\",\"levelNumber\":\"4438784399638528\",\"buildingName\":\"Celia Cole\",\"privateStreetNumber\":\"Sudsi Heights\",\"privateStreetName\":\"Siches Lane\",\"@type\":\"dutasiv\",\"@baseType\":\"GeographicSubAddress\",\"@schemaLocation\":\"avludfud\"}]}},\"@type\":\"cirgugta\",\"@schemaLocation\":\"ojainijo\",\"@baseType\":\"opuculb\"}",
+  CURLOPT_HTTPHEADER =&gt; array(<br>
+    "accept: application/json",<br>
+    "content-type: application/json",<br>
+    'SECURITY_CREDENTIALS',<br>
+    'x-external-system' \ (for use i<br>n sandbox mode only, pass any unique <br>
+    value &gt;= 8 chars)
+  ),<br>
+));<br>
+<br>
+$response = curl_exec($curl);
+$err = curl_error($curl);<br>
+<br>
+curl_close($curl);<br>
+<br>
+if ($err) {<br>
+  echo "cURL Error #:" . $err;<br>
+} else {<br>
+  echo $response;<br>
+}</pre>
+                                                        </code>
+						</lightning-tab>
+						<lightning-tab label="JAVA" value="four">
+							<label>
+                                                            <span style="text-underline-position:auto;">
+
+                                                                <div class="package-phone-desc-items-heading txtBold ">Example Request</div>
+                                                            </span>
+                                                        </label>
+							<code class="pre pad-5">
+                                                            <pre class="scrollAdjust" style="height:165px">// OkHttpClient from http://square.github.io/okhttp/<br>
+<br>
+OkHttpClient client = new OkHttpClient();<br>
+<br>
+MediaType mediaType = MediaType.parse("application/json");<br>
+RequestBody body = RequestBody.create(mediaType, "\"actualEndTime\":\"2017-12-17T04:20:38.464Z\",\"actualStartTime\":\"2021-01-08T10:17:19.714Z\",\"budget\":\"sufkun\",\"channel\":\"ebtetu\",\"completionDate\":\"2008-07-20T17:04:41.986Z\",\"currency\":\"MXN\",\"description\":\"Sidjepbar tuip haw mashuk vuluw hibru habses wec ke ru zi facpupru re utsefliv ocidin.\",\"externalId\":\"6399882011082752\",\"impact\":\"dugo\",\"plannedEndTime\":\"2008-05-27T04:10:42.216Z\",\"plannedStartTime\":\"2019-07-10T03:53:10.503Z\",\"priority\":\"foze\",\"requestDate\":\"2013-03-29T14:02:45.993Z\",\"requestType\":\"ipaavju\",\"risk\":\"wovuis\",\"riskMitigationPlan\":\"fibwi\",\"riskValue\":\"53.01\",\"scheduledDate\":\"2010-02-14T15:55:11.269Z\",\"status\":\"lanair\",\"attachment\":[\"id\":\"8916794299383808\",\"href\":\"numlop\",\"size\":5.39984186,\"name\":\"Ola Figueroa\",\"description\":\"Gujof fi tutzatgud luzuzca vuolazo uk bepug tajoim gensez iloupivu huh hug pujir levaw zuvwa hega fop riva.\",\"sizeUnit\":\"hepokdev\",\"mimeType\":\"kocpas\",\"url\":\"http://za.mg/duhbarbac\",\"validFor\":\"startDateTime\":\"2010-08-22T18:14:54.612Z\",\"endDateTime\":\"2003-09-08T20:36:26.629Z\"},\"attachmentType\":\"isajci\",\"content\":\"jumpe\",\"@type\":\"wiilu\",\"@baseType\":\"Attachment\",\"@schemaLocation\":\"ilip\"}],\"workLog\":\"createDateTime\":\"2005-03-05T18:48:45.121Z\",\"description\":\"Ek ri laib su hortemilo avu covtefur hok ku rah revditene mawogsuv cisdumkoj ih.\",\"lastUpdateDateTime\":\"Price\",\"record\":[\"dateTime\":\"2006-05-18T03:52:39.973Z\",\"description\":\"Zafan kor edimigsed garap ifkiji pemciji we dodhuw soma lar ivi kijfe akabuv jamto nipmeutu te ope retakjog.\",\"supportPerson\":\"hiwogta\",\"@type\":\"zitma\",\"@schemaLocation\":\"soczelvu\",\"@baseType\":\"lucp\"}],\"@type\":\"maug\",\"@schemaLocation\":\"juwtohet\",\"@baseType\":\"lomuf\"},\"incident\":[\"description\":\"Ahu riol newon noudevig ozoho ojta cus nikal sace moihbew osuenvid wepkeg.\",\"name\":\"Beatrice Figueroa\",\"@type\":\"fuhk\",\"@schemaLocation\":\"otane\",\"@baseType\":\"dovub\"}],\"specification\":\"description\":\"Kaltarag vod bic kec wu kafekru mo iti ofoariku huc utze iz leorepi laas jejo raleb hik mes.\",\"href\":\"cura\",\"id\":\"1134850807431168\",\"name\":\"Raymond Evans\",\"validFor\":\"startDateTime\":\"2020-07-19T17:37:40.080Z\",\"endDateTime\":\"2004-12-01T00:57:08.080Z\"},\"@type\":\"raehhiwi\",\"@schemaLocation\":\"zipab\",\"@baseType\":\"zepuzad\"},\"impactEntity\":[\"description\":\"Pefa idrah wi vajlokmi zemjumo ni eve ko lor un lut ujupetos utol soziv be uzu bek zopat.\",\"href\":\"nopubok\",\"id\":\"1816054724558848\",\"@referredType\":\"fuguz\"}],\"characteristic\":[\"name\":\"Dora Lopez\",\"valueType\":\"96.48\",\"value\":\"97.63\",\"@type\":\"emmoww\",\"@baseType\":\"azcaji\",\"@schemaLocation\":\"cobatv\"}],\"targetEntity\":[\"description\":\"Hiw iha zoez daakigeg wira pulupupo cunefi netji ema ugomijpul ge jefef.\",\"href\":\"niff\",\"id\":\"8954506146480128\",\"@referredType\":\"fufdeh\"}],\"relatedParty\":[\"id\":6848288766558208}],\"resolution\":\"code\":\"beewwog\",\"description\":\"Feppi ho negni awtuvebu ma atoevuhih pabotivus riw baghu za rapvin rawona razezsa cedce.\",\"name\":\"Lizzie Sherman\",\"task\":[\"id\":5921264338206720}],\"@type\":\"cekhedim\",\"@schemaLocation\":\"deccigf\",\"@baseType\":\"dedmom\"},\"sla\":[\"href\":\"haeritl\",\"id\":\"3648181369831424\",\"name\":\"Georgia Oliver\",\"@referredType\":\"zanojn\"}],\"relatedChangeRequest\":[\"correlation\":\"bagp\",\"description\":\"Mojuhrop vuiw musmapud lamwe zuig le zolca ceruvdog cov ririrat mapponac ci buw ohazavvis epuma gaivo ciuz.\",\"href\":\"ziggi\",\"id\":\"8082253406011392\",\"@referredType\":\"fefo\"}],\"category\":[\"href\":\"agav\",\"id\":\"1898018542452736\",\"name\":\"Edward Drake\",\"@referredType\":\"alawevu\"}],\"note\":[\"id\":746697785344000}],\"location\":\"id\":\"8803511634493440\",\"href\":\"wefpegij\",\"name\":\"Erik Ruiz\",\"role\":\"ofopja\",\"@type\":\"peajicat\",\"@baseType\":\"Place\",\"@referredType\":\"leku\",\"@schemaLocation\":\"fetaju\",\"characteristic\":[\"name\":\"Isabelle Curry\",\"valueType\":\"74.72\",\"value\":\"11.03\",\"@type\":\"cahsioz\",\"@baseType\":\"derud\",\"@schemaLocation\":\"netoku\"}],\"geographicAddress\":\"id\":\"4916483306029056\",\"href\":\"inapaupi\",\"streetNr\":\"Refi Ridge\",\"streetNrSuffix\":\"Eceeco Pass\",\"streetNrLast\":\"Zahek Center\",\"streetNrLastSuffix\":\"Wuhpi Path\",\"streetName\":\"Guha Ridge\",\"streetType\":\"Romwu Highway\",\"streetSuffix\":\"Detepa Heights\",\"postcode\":\"R7P 2Y2\",\"locality\":\"lekia\",\"city\":\"Feezutap\",\"stateOrProvince\":\"NT\",\"country\":\"Iran\",\"@type\":\"zazzen\",\"@baseType\":\"GeographicAddress\",\"@schemaLocation\":\"zajojah\",\"geographicLocationRefOrValue\":\"id\":\"3392702773198848\",\"href\":\"pesozalo\",\"name\":\"Francis Ruiz\",\"geometryType\":\"ihve\",\"accuracy\":\"6011661230052816\",\"spatialRef\":\"jehu\",\"@type\":\"fufz\",\"@schemaLocation\":\"nupideir\",\"geometry\":[\"x\":\"tiwr\",\"y\":\"igesu\",\"z\":\"feawovo\"}]},\"geographicSubAddress\":[\"id\":\"6257711272427520\",\"href\":\"foogobi\",\"type\":\"okipireo\",\"name\":\"Owen Hill\",\"subUnitType\":\"gius\",\"subUnitNumber\":\"961131118067712\",\"levelType\":\"likijaco\",\"levelNumber\":\"1194275085746176\",\"buildingName\":\"Myrtie Hall\",\"privateStreetNumber\":\"Awji Point\",\"privateStreetName\":\"Malo Drive\",\"@type\":\"binelput\",\"@baseType\":\"GeographicSubAddress\",\"@schemaLocation\":\"udevbifo\"}],\"description\":\"Etigurif gajcorvo pukeh jujalgum pi doidvu zihnoho od udpacup mah sogos ga va ruppo.\",\"addressLine\":\"1980 Heplo Way\",\"addressLine2\":\"584 Veace Lane\",\"type\":\"tebo\",\"externalId\":\"12600192532480\",\"sourceSystemId\":\"6297252624596992\",\"validated\":false},\"geographicSite\":\"id\":\"4283959187865600\",\"href\":\"gike\",\"name\":\"William Norton\",\"description\":\"Nora ku tut nomtaari if fec fu zomvomap zerla wara cu ju.\",\"code\":\"izekuku\",\"status\":\"zekuder\",\"@baseType\":\"GeographicSite\",\"@type\":\"ipodog\",\"@schemaLocation\":\"siwasu\",\"address\":\"id\":\"991997319970816\",\"href\":\"baawe\",\"streetNr\":\"Haon Way\",\"streetNrSuffix\":\"Gofcob Road\",\"streetNrLast\":\"Otiiv Pike\",\"streetNrLastSuffix\":\"Wutnos Extension\",\"streetName\":\"Ranmo Ridge\",\"streetType\":\"Jahvas Pass\",\"streetSuffix\":\"Mezdu Court\",\"postcode\":\"R7I 4C8\",\"locality\":\"asevai\",\"city\":\"Zokmece\",\"stateOrProvince\":\"NL\",\"country\":\"Syria\",\"@type\":\"gihwuj\",\"@baseType\":\"GeographicAddress\",\"@schemaLocation\":\"kibnumv\",\"geographicLocationRefOrValue\":\"id\":\"2942866018009088\",\"href\":\"larojorg\",\"name\":\"Kenneth Ramos\",\"geometryType\":\"gojuzj\",\"accuracy\":\"5610099890191060\",\"spatialRef\":\"omogunza\",\"@type\":\"fajun\",\"@schemaLocation\":\"pove\",\"geometry\":[\"x\":\"zohacg\",\"y\":\"lacofveu\",\"z\":\"sunluzig\"}]},\"geographicSubAddress\":[\"id\":\"5763741570301952\",\"href\":\"hejgu\",\"type\":\"egwec\",\"name\":\"Mabelle Jenkins\",\"subUnitType\":\"taccerdi\",\"subUnitNumber\":\"4464800140623872\",\"levelType\":\"acuzima\",\"levelNumber\":\"7157467358167040\",\"buildingName\":\"Herbert Jackson\",\"privateStreetNumber\":\"Suvis Grove\",\"privateStreetName\":\"Fimig Circle\",\"@type\":\"civaligv\",\"@baseType\":\"GeographicSubAddress\",\"@schemaLocation\":\"safowuhz\"}],\"description\":\"Sala ubuwu wom gutaro rup di ijku beobji cu mi heni bipluwoze tikhuk nurgu wa rog.\",\"addressLine\":\"169 Rijnet Heights\",\"addressLine2\":\"1795 Wevbup Loop\",\"type\":\"ugra\",\"externalId\":\"1908364906856448\",\"sourceSystemId\":\"5691945504473088\",\"validated\":false},\"geographicLocation\":\"id\":\"3089285053939712\",\"href\":\"zagiev\",\"name\":\"Dollie Chambers\",\"geometryType\":\"nodu\",\"accuracy\":\"4026780268792354\",\"spatialRef\":\"nefu\",\"@type\":\"ekui\",\"@schemaLocation\":\"tulocehi\",\"geometry\":[\"x\":\"lumgeztu\",\"y\":\"homuhv\",\"z\":\"ovopioji\"}]},\"calendar\":[\"status\":\"adedow\",\"day\":\"cimsajuf\",\"timeZone\":\"03:25\",\"hourPeriod\":[\"startHour\":\"22\",\"endHour\":\"07\"}]}],\"relatedParty\":[\"id\":1837481802596352}],\"siteRelationship\":[\"id\":\"5359267760570368\",\"href\":\"rehan\",\"type\":\"gunem\",\"role\":\"evebpep\",\"validFor\":\"startDateTime\":\"2007-09-10T06:49:11.621Z\",\"endDateTime\":\"2001-04-18T01:11:36.787Z\"}}],\"externalId\":\"3968130051211264\",\"sourceSystemId\":\"7617446825426944\",\"tags\":[\"mosadwuh\"],\"onSiteSubAddress\":[\"id\":\"5551714008563712\",\"href\":\"valakuo\",\"type\":\"okvo\",\"name\":\"Don Bass\",\"subUnitType\":\"enpavjo\",\"subUnitNumber\":\"4862629388484608\",\"levelType\":\"woiznu\",\"levelNumber\":\"4438784399638528\",\"buildingName\":\"Celia Cole\",\"privateStreetNumber\":\"Sudsi Heights\",\"privateStreetName\":\"Siches Lane\",\"@type\":\"dutasiv\",\"@baseType\":\"GeographicSubAddress\",\"@schemaLocation\":\"avludfud\"}]}},\"@type\":\"cirgugta\",\"@schemaLocation\":\"ojainijo\",\"@baseType\":\"opuculb\"}");<br>
+Request request = new Request.Builder()<br>
+  .url(" ")<br>
+  .post(body)<br>
+  .addHeader('SECURITY_CREDENTIALS')<br>
+  .addHeader("content-type", "application/json")<br>
+  .addHeader("accept", "application/json")<br>
+  .addHeader('x-external-system' \ (for use in sandbox mode only, pass <br>
+   any unique value &gt;= 8 chars))<br>
+  .build();<br>
+
+Response response = client.newCall(request).execute();</pre>
+                                                        </code>
+						</lightning-tab>
+						<label>
+                                                            <span style="text-underline-position:auto;">
+                                                                <div class="spacer10"></div>
+
+                                                                <div class="package-phone-desc-items-heading txtBold ">Example Response</div>
+                                                            </span>
+                                                        </label>
+						<div class="pre pad-5">
+							<pre class="scrollAdjust">
+   "description":"Billing, Contract, General Inquiries",<br>
+   "externalId":"TESTCR-0608-04",<br>
+   "priority":"STANDARD",<br>
+   "requestDate":"2020-07-17T23:20:49.898Z",<br>
+   "attachment":[<br>
+         "name":"test doc 1",<br>
+         "mimeType":"application/text",<br>
+         "content":"string"<br>
+      },<br>
+         "name":"test doc 2",<br>
+         "mimeType":"application/text",<br>
+         "content":"string 2"<br>
+      }<br>
+   ],<br>
+   "characteristic":[<br>
+         "name":"classificationid",<br>
+         "valueType":"string",<br>
+         "value":"410515"<br>
+      },<br>
+         "name":"custrefnum",<br>
+         "valueType":"string",<br>
+         "value":"custrefnum test"<br>
+      },<br>
+         "name":"classstructurepath",<br>
+         "valueType":"string",<br>
+         "value":"classstructurepath test"<br>
+      },<br>
+         "name":"ciservicenumber",<br>
+         "valueType":"string",<br>
+         "value":"GTDE-NSMIS-GLOBAL"<br>
+      }<br>
+   ],<br>
+   "targetEntity":[<br>
+         "id":"GTDE-NSMIS-GLOBAL"<br>
+      }<br>
+   ],<br>
+   "relatedParty":[<br>
+         "role":"onbehalfof",<br>
+         "name":"testuser"<br>
+      },<br>
+         "role":"originator",<br>
+         "name":"TEST@USER"<br>
+      },<br>
+         "role":"affectedcustomer",<br>
+         "name":"GTDE"<br>
+      },<br>
+         "role":"sitecontact",<br>
+            "givenName":"Test",<br>
+            "familyName":"User",<br>
+            "contactMedium":[<br>
+                  "type":"telephone",<br>
+                     "number":"12345678"<br>
+                  }<br>
+               },<br>
+                  "type":"mobile",<br>
+                     "number":"1234567890"<br>
+                  }<br>
+               },<br>
+                  "type":"pager",<br>
+                     "number":"12"<br>
+                  }<br>
+               },<br>
+                  "type":"emailaddress",<br>
+                     "emailAddress":"abc@gmail.com"<br>
+                  }<br>
+               }<br>
+            ]<br>
+         }<br>
+      },<br>
+      {<br>
+         "role":"sitecontact2",<br>
+         "individual":<br>
+            "givenName":"Test",<br>
+            "familyName":"User",<br>
+            "contactMedium":[<br>
+                  "type":"telephone",<br>
+                     "number":"98765432"<br>
+                  }<br>
+               },<br>
+               {<br>
+                  "type":"mobile",<br>
+                     "number":"9876543210"<br>
+                  }<br>
+               },<br>
+               {<br>
+                  "type":"pager",<br>
+                     "number":"21"<br>
+                  }<br>
+               },<br>
+                  "type":"emailaddress",<br>
+                     "emailAddress":"cba@gmail.com"<br>
+                  }<br>
+               }<br>
+            ]<br>
+         }<br>
+      }<br>
+   ],<br>
+   "category":[<br>
+      {
+         "id":"123",<br>
+         "name":"commoditygroup"<br>
+      }<br>
+   ],<br>
+   "note":[<br>
+      {
+         "text":"Cr Summary testing",<br>
+         "noteType":"crsummary",<br>
+         "summary":"Cr Summary"<br>
+      },<br>
+      {
+         "text":"worklog test description",<br>
+         "noteType":"worklog",<br>
+         "clientviewable":true,<br>
+         "summary":"worklog test description_longdescription",<br>
+         "logtype":"ClientNote"<br>
+      }<br>
+   ]<br>
+}</pre>
+						</div>
+						<div>
+
+							<span>
+
+        <div class="package-phone-desc-items-heading txtBold margin-20-top">Path</div>
+    </span> <span>post /createChangeRequest</span>
+
+							<div class="spacer30"></div>
+
+							<div class="borderGrayLight6">
+								<label>
+            <div class="package-phone-desc-items-heading txtBold margin-20-top margin-20-left">Parameters</div>
+        </label>
+
+								<div class="table-responsive">
+									<table style="width:100%">
+
+										<tbody>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">
+													First Name
+												</td>
+												<td class="pad-10-bottom pad-10-top" style="padding-left: 40px">
+
+												</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width:200px">Required In Body</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width:200px">string</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td class="pad-10-bottom pad-20-left" style="width:200px"></td>
+												<td class="pad-10-bottom pad-30-left"></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">
+													Last Name
+												</td>
+												<td class="pad-10-bottom pad-10-top" style="padding-left: 40px">
+
+												</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width:200px">Required In Body</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width:200px">string</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td class="pad-10-bottom pad-20-left" style="width:200px"></td>
+												<td class="pad-10-bottom pad-30-left"></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">
+													CI Num
+												</td>
+												<td class="pad-10-bottom pad-10-top" style="padding-left: 40px">
+
+												</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width:200px">Required In Body</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width:200px">string</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td class="pad-10-bottom pad-20-left" style="width:200px"></td>
+												<td class="pad-10-bottom pad-30-left"></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">
+													Classification Id
+												</td>
+												<td class="pad-10-bottom pad-10-top" style="padding-left: 40px">
+
+												</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width:200px">Required In Body</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width:200px">string</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td class="pad-10-bottom pad-20-left" style="width:200px"></td>
+												<td class="pad-10-bottom pad-30-left"></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">
+													Action
+												</td>
+												<td class="pad-10-bottom pad-10-top" style="padding-left: 40px">
+
+												</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width:200px">Optional In Body</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width:200px">string</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td class="pad-10-bottom pad-20-left" style="width:200px"></td>
+												<td class="pad-10-bottom pad-30-left"></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">
+													Urgency
+												</td>
+												<td class="pad-10-bottom pad-10-top" style="padding-left: 40px">
+
+												</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width:200px">Required In Body</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width:200px">string</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td class="pad-10-bottom pad-20-left" style="width:200px"></td>
+												<td class="pad-10-bottom pad-30-left"></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">
+													Description
+												</td>
+												<td class="pad-10-bottom pad-10-top" style="padding-left: 40px">
+
+												</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width:200px">Required In Body</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width:200px">string</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td class="pad-10-bottom pad-20-left" style="width:200px"></td>
+												<td class="pad-10-bottom pad-30-left"></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">
+													Long Description
+												</td>
+												<td class="pad-10-bottom pad-10-top" style="padding-left: 40px">
+
+												</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width:200px">Required In Body</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width:200px">string</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td class="pad-10-bottom pad-20-left" style="width:200px"></td>
+												<td class="pad-10-bottom pad-30-left"></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">
+													Customer Requested Date
+												</td>
+												<td class="pad-10-bottom pad-10-top" style="padding-left: 40px">
+
+												</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width:200px">Required In Body</td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-20-left" style="width:200px">string</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td class="pad-10-bottom pad-20-left" style="width:200px"></td>
+												<td class="pad-10-bottom pad-30-left"></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+							</div>
+							<div class="spacer30"></div>
+							<div class="borderGrayLight6">
+
+								<label>
+            <div class="package-phone-desc-items-heading txtBold margin-20-top margin-20-left">Response</div>
+        </label>
+
+								<div class="table-responsive">
+									<table style="width:100%">
+
+										<tbody>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">202 </td>
+												<td class="pad-10-bottom pad-10-top " style="padding-left: 40px">Accepted</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">400 </td>
+												<td class="pad-10-bottom pad-10-top " style="padding-left: 40px">Bad Request</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">401 </td>
+												<td class="pad-10-bottom pad-10-top " style="padding-left: 40px">Unauthorized</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">403 </td>
+												<td class="pad-10-bottom pad-10-top " style="padding-left: 40px">Forbidden</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">404 </td>
+												<td class="pad-10-bottom pad-10-top " style="padding-left: 40px">Not Found</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">405 </td>
+												<td class="pad-10-bottom pad-10-top " style="padding-left: 40px">Method Not allowed</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">409 </td>
+												<td class="pad-10-bottom pad-10-top " style="padding-left: 40px">Conflict</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td class="pad-10-bottom pad-10-top pad-20-left" style="width:200px">500 </td>
+												<td class="pad-10-bottom pad-10-top " style="padding-left: 40px">Internal Server Error</td>
+											</tr>
+											<tr class=" borderGrayLight6btm">
+												<td></td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+
+								</div>
+
+
+
+							</div>
+							<div class="spacer30"></div>
+						</div>
+					</lightning-tabset>
+				</lightning-tab>
+				<lightning-tab label="PATCH /changeRequest/{id}">
+					<lightning-tabset active-tab-value="one">
+						<lightning-tab label="Curl" value="one">
+							<label>
+                                                            <span style="text-underline-position:auto;">
+
+                                                                <div class="package-phone-desc-items-heading txtBold ">Example Request</div>
+                                                            </span>
+                                                        </label>
+						</lightning-tab>
+						<lightning-tab label="Python" value="two">
+							<label>
+                                                            <span style="text-underline-position:auto;">
+
+                                                                <div class="package-phone-desc-items-heading txtBold ">Example Request</div>
+                                                            </span>
+                                                        </label>
+						</lightning-tab>
+						<lightning-tab label="PHP" value="three">
+							<label>
+                                                            <span style="text-underline-position:auto;">
+
+                                                                <div class="package-phone-desc-items-heading txtBold ">Example Request</div>
+                                                            </span>
+                                                        </label>
+						</lightning-tab>
+						<lightning-tab label="JAVA" value="four">
+							<label>
+                                                            <span style="text-underline-position:auto;">
+
+                                                                <div class="package-phone-desc-items-heading txtBold ">Example Request</div>
+                                                            </span>
+                                                        </label>
+						</lightning-tab>
+					</lightning-tabset>
+				</lightning-tab>
+			</lightning-tabset>
+		</div>
+	</div>
+</template>
